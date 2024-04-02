@@ -1,0 +1,99 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+
+*{
+    padding: 0;
+    margin: 0;
+  }
+  .body{
+    margin-top: 40%;
+  }
+  .azul {
+    color: #1D83D4;
+  }
+  
+  .icons{
+    margin: 0 auto;
+    text-align: center;
+    width: 45%;
+  }
+  .titulointroducao{
+    margin-top: 40px;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .descricaointroducao{
+    margin-top: 50px;
+    margin-left:50px;
+     margin-right: 50px;
+     text-align: center;
+     color: #BABABA;
+     margin-bottom: 90px;
+  }
+  
+  
+  /*FONTES*/
+  .righteous-regular {
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .source-sans {
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  /**/
+  .container-25 {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    column-gap: 18px;
+    width: 72px;
+    box-sizing: border-box;
+  }
+  .ellipse-7 {
+    border-radius: 6px;
+    background: #D9D9D9;
+    width: 12px;
+    height: 12px;
+  }
+  .ellipse-8 {
+    border-radius: 6px;
+    background: #D9D9D9;
+    width: 12px;
+    height: 12px;
+  }
+  .ellipse-9 {
+    border-radius: 6px;
+    background: #2E7DB7;
+    width: 12px;
+    height: 12px;
+  }

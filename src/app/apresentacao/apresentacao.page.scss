@@ -1,0 +1,78 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.body{
+  margin-top: 40%;
+}
+.azul {
+  color: #1D83D4;
+}
+
+.icons{
+  margin: 0 auto;
+  text-align: center;
+  width: 45%;
+}
+.titulointroducao{
+  margin-top: 40px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.descricaointroducao{
+  margin-top: 50px;
+  margin-left:50px;
+   margin-right: 50px;
+   text-align: center;
+   color: #BABABA;
+   margin-bottom: 90px;
+}
+
+
+/*FONTES*/
+.righteous-regular {
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.source-sans {
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+/**/
+.container-25 {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  column-gap: 18px;
+  width: 72px;
+  box-sizing: border-box;
+}
+.ellipse-7 {
+  border-radius: 6px;
+  background: #D9D9D9;
+  width: 12px;
+  height: 12px;
+}
+.ellipse-8 {
+  border-radius: 6px;
+  background: #D9D9D9;
+  width: 12px;
+  height: 12px;
+}
+.ellipse-9 {
+  border-radius: 6px;
+  background: #2E7DB7;
+  width: 12px;
+  height: 12px;
+}
+
+.swiper {
+  width: auto;
+  height: auto;
+}
