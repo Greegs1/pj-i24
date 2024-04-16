@@ -1,0 +1,126 @@
+
+
+<ion-content [fullscreen]="true">
+  <form>
+    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-0">
+        <img src="https://i.imgur.com/lZxL511.png" style="width: 200px;">
+      <div class="w-full bg-white rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 mt-5">
+        <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+          <p class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
+            Crie sua conta
+            </p>
+            
+            <div>
+              <label class="block mb-2 text-sm font-medium text-gray-900">
+                Nome completo
+              </label>
+              <input placeholder="Ivonésio Gonçalves" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" id="username" type="text">
+            </div>
+            <div>
+              <label class="block mb-2 text-sm font-medium text-gray-900">
+                CPF
+              </label>
+              <input placeholder="123.456.789-12" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" id="cpf" type="text">
+            </div>
+            <div>
+              <label class="block mb-2 text-sm font-medium text-gray-900">
+                Email
+              </label>
+              <input placeholder="ivonesio@gmail.com" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" id="email" type="text">
+            </div>
+            <div>
+              <label class="block mb-2 text-sm font-medium text-gray-900">
+                Telefone
+              </label>
+              <input placeholder="(48) 12345-6789" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" id="telefone" type="text">
+            </div>
+            <div>
+              <label class="block mb-2 text-sm font-medium text -gray-900">
+                CEP
+              </label>
+              <input placeholder="88820-000" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" name="cep" type="text" id="cep" value="" size="10" maxlength="9">
+              <label class="block mb-2 text-sm font-medium text-gray-300">
+                Use "-" ex:. (88801-001)
+              </label>  
+            </div>
+
+              <div>
+                <label class="block mb-2 text-sm font-medium text-gray-900">
+                Estado
+                </label>
+                <select
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5"
+                id="estado"
+                required
+                data-input>
+                <option selected>Estado</option>
+                <option value="SC">Santa Catarina</option>
+
+              </select>
+              </div>
+              <div>
+                <label class="block mb-2 text-sm font-medium text-gray-900">
+                Cidade
+                </label>
+                <select
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5"
+                id="cidade"
+                required
+                data-input>
+                <option selected>Cidade</option>
+                <option value="cocal">Cocal do Sul</option>
+
+                <option value="criciuma">Criciuma</option>
+                <option value="icara">Içara</option>
+
+
+              </select>
+              </div>
+            <div>
+              <label class="block mb-2 text-sm font-medium text-gray-900">
+              Rua/Logradouro 
+              </label>
+              <input placeholder="Av. Pindamonhagaba" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" name="rua" id="rua" type="text">
+            </div>
+            <div>
+              <label class="block mb-2 text-sm font-medium text-gray-900">
+              Numero
+              </label>
+              <input placeholder="1597" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5"  id="numero" type="number">
+            </div>
+            
+            <div>
+              <label class="block mb-2 text-sm font-medium text-gray-900">
+                Senha
+              </label>
+              <input class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" placeholder="••••••••" id="password" type="password">
+            </div>
+            <div>
+              <label class="block mb-2 text-sm font-medium text-gray-900">
+                Confirmar senha
+              </label>
+              <input class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" placeholder="••••••••" id="confirmPassword" type="password">
+            </div>
+            <div class="flex items-start">
+              <div class="flex items-center h-5">
+                <input class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 bg-gray-700 border-gray-600 focus:ring-primary-600 ring-offset-gray-800" type="checkbox" aria-describedby="terms" id="terms">
+              </div>
+              <div class="ml-3 text-sm">
+                <label class="font-light text-gray-500 text-gray-300">
+                  Ao prosseguir concordo com todos termos e condições do aplicativo.
+                </label>
+              </div>
+            </div>
+            <button
+            class="w-full py-2 px-4 bg-gradient-to-r from-blue-400 to-green-500 hover:bg-blue-700 rounded-md shadow-lg text-white font-semibold transition duration-200"
+            type="submit"
+          >
+          Criar conta
+        </button>
+
+          
+        </div>
+      </div>
+    </div></form>
+  
+</ion-content>
