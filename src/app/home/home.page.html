@@ -1,62 +1,98 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-<ion-menu content-id="main-content">
-  <ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title>Menu Content</ion-title>
+      <ion-title size="large">Home</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding">
-    <a href="">teste</a>
-<hr>
-  </ion-content>
-</ion-menu>
-<div class="ion-page" id="main-content">
-  <ion-content class="ion-padding">
-    <ion-menu-toggle>
-      <ion-button color="light"><ion-icon name="menu-outline"></ion-icon></ion-button>
-    </ion-menu-toggle>
-    <div class="  flex justify-center items-center mt-5">
-      
-<a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
 
-  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Olá, Bem vindo! Ivonésio</h5>
-  <p class="font-normal text-gray-700 dark:text-gray-400"> <ion-icon name="person-outline"></ion-icon> usuario</p>
-  </a>
-  
-    </div>
-    
-    <div class="container mx-auto px-4 py-8 max-w-md">
-      <div class="grid grid-cols-2 gap-6">
-        <div class="bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl	 p-6 shadow-lg text-white" routerLink="/energia">
-          <h2 class="text-xl font-semibold mb-2">ENERGIA</h2>
-          <p class="text-gray-300 text-xs	">Exibir seu consumo mensal...</p>
-        </div>
-        <div class="bg-gradient-to-r from-blue-500 to-teal-500 rounded-3xl	 p-6 shadow-lg text-white" routerLink="/fatura">
-          <h2 class="text-xl font-semibold mb-2">FATURA</h2>
-          <p class="text-gray-300 text-xs	">Exibir seu resumo financeiro...</p>
-        </div>
-        <div class="bg-gradient-to-r from-green-500 to-lime-500 rounded-3xl	 p-6 shadow-lg text-white" routerLink="/config">
-          <h2 class="text-xl font-semibold mb-2">OPCOES</h2>
-          <p class="text-gray-200 text-xs" >Configurações do aplicativo...</p>
-        </div>
-        
-        <div class="bg-gradient-to-r from-yellow-500 to-amber-500 rounded-3xl	 p-6 shadow-lg text-white " routerLink="/faleconosco">
-          <h2 class="text-xl font-semibold mb-2">CENTRAL DE AJUDA</h2>
-          <p class="text-gray-200 text-xs" >Fale conosco...</p>
-        </div>
+  <!-- Card de Boas-Vindas -->
+  <ion-card class="welcome-card rounded-card">
+    <div class="welcome-content">
+      <div class="welcome-text-container">
+        <ion-card-header>
+          <ion-card-title>Bem-vindo ao Renergy!</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Estamos felizes em tê-lo a bordo. Explore as funcionalidades do Renergy e descubra como podemos ajudar você.</p>
+        </ion-card-content>
       </div>
-    </div> 
+      <div class="welcome-icon-container">
+        <ion-icon name="flash"></ion-icon>    </div>
+    </div>
+  </ion-card>
 
-          <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-            <dl class="text-3xl	text-center text-dark"><ion-icon name="battery-charging"></ion-icon><br>Notificações de <b class="text-red-800">Interrupções</b><dt class="text-3xl	text-center text-dark"></dt> do Sistema</dl >
-              <br>
-          </div>
-          <a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"></a>
-          <br>
-          <a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"></a>
-          <br>
-          <a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"></a>
-          <br>
-          <a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"></a>
-          <br>
-          <a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"></a>
+  <!-- Card ALERTAS -->
+  <ion-card button color="danger" class="rounded-card">
+    <div class="card-content">
+      <div class="icon-container">
+        <ion-icon name="alert-circle-outline"></ion-icon>
+      </div>
+      <div class="text-container">
+        <ion-card-header>
+          <ion-card-title>ALERTAS</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Ver alertas ativos</p>
+        </ion-card-content>
+      </div>
+    </div>
+  </ion-card>
+
+  <!-- Card HORÁRIOS -->
+  <ion-card button color="primary" class="rounded-card">
+    <div class="card-content">
+      <div class="icon-container">
+        <ion-icon name="time-outline"></ion-icon>
+      </div>
+      <div class="text-container">
+        <ion-card-header>
+          <ion-card-title>HORÁRIOS</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Ver horários disponíveis</p>
+        </ion-card-content>
+      </div>
+    </div>
+  </ion-card>
+
+  <!-- Card AJUSTES -->
+  <ion-card button color="tertiary" class="rounded-card" routerLink="/configuracoes">
+    <div class="card-content">
+      <div class="icon-container">
+        <ion-icon name="settings-outline"></ion-icon>
+      </div>
+      <div class="text-container">
+        <ion-card-header>
+          <ion-card-title>AJUSTES</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Configurações do sistema</p>
+        </ion-card-content>
+      </div>
+    </div>
+  </ion-card>
+
+  <!-- Card CENTRAL DE AJUDA -->
+  <ion-card button color="medium" class="rounded-card">
+    <div class="card-content">
+      <div class="icon-container">
+        <ion-icon name="help-circle-outline"></ion-icon>
+      </div>
+      <div class="text-container">
+        <ion-card-header>
+          <ion-card-title>CENTRAL DE AJUDA</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Obter ajuda</p>
+        </ion-card-content>
+      </div>
+    </div>
+  </ion-card>
+
+</ion-content>

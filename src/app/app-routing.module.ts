@@ -36,12 +36,48 @@ const routes: Routes = [
     loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
   },
   {
+    path: 'cadastro/:id',
+    loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
+  },
+  {
     path: 'esqueceu',
     loadChildren: () => import('./esqueceu/esqueceu.module').then( m => m.EsqueceuPageModule)
   },
   {
     path: 'admusuarios',
     loadChildren: () => import('./admusuarios/admusuarios.module').then( m => m.AdmusuariosPageModule)
+  },
+  {
+    path: 'servico',
+    loadChildren: () => import('./servico/servico.module').then( m => m.ServicoPageModule)
+  },
+  {
+    path: 'admnotificacao',
+    loadChildren: () => import('./admnotificacao/admnotificacao.module').then( m => m.AdmnotificacaoPageModule)
+  },
+  {
+    path: 'configuracoes',
+    loadChildren: () => import('./configuracoes/configuracoes.module').then( m => m.ConfiguracoesPageModule)
+  },
+  {
+    path: 'menu',
+    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+  },
+  {
+    path: 'grafico-exemplo',
+    loadChildren: () => import('./grafico-exemplo/grafico-exemplo.module').then( m => m.GraficoExemploPageModule)
+  },
+  {
+    path: 'card',
+    loadChildren: () => import('./card/card.module').then( m => m.CardPageModule)
+  },
+  {
+    path: 'horarios',
+    loadChildren: () => import('./horarios/horarios.module').then( m => m.HorariosPageModule)
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
   },
 ];
 

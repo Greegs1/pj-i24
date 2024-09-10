@@ -1,0 +1,17 @@
+<div class="ion-page" id="main-content">
+  <ion-content class="ion-padding">
+    <ion-menu-toggle>
+      <ion-button color="light"><ion-icon name="menu-outline"></ion-icon></ion-button>
+    </ion-menu-toggle>
+    <div class="  flex justify-center items-center mt-5">
+
+      <ion-list>
+        <ion-item>
+        <ion-select label="Idioma" [(ngModel)]="idioma" (ionChange)="setarIdioma()">
+        <ion-select-option value="pt_br">Português (Brasil)</ion-select-option>
+        <ion-select-option value="en_us">Inglês (Estados Unidos) </ion-select-option>
+        </ion-select>
+        </ion-item>
+        </ion-list>
+
+    </div>

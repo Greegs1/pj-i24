@@ -1,3 +1,109 @@
-ion-content {
-    --background: #ffffff url('https://i.imgur.com/XXnnYep.png') no-repeat center center / cover !important;
+.input-label {
+    margin-bottom: 8px;
+    color: #666;
+    font-size: 1.2em; /* Aumenta o tamanho da label */
   }
+  .input-group {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .input-label {
+    margin-bottom: 8px;
+    color: #666;
+    font-size: 1.2em; /* Aumenta o tamanho da label */
+  }
+  
+  ion-input {
+    --border-color: #ddd;
+    --placeholder-color: #aaa;
+    --color: #333;
+    padding: 15px; /* Aumenta o padding interno */
+    border-radius: 12px; /* Ajusta o arredondamento */
+    font-size: 1.2em; /* Aumenta o tamanho do texto */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .button {
+    --background: linear-gradient(to right, #04e35a, #5da903);
+    --color: white;
+    --border-radius: 12px;
+    padding: 15px 0; /* Aumenta o padding do botão */
+    font-size: 1.2em; /* Aumenta o tamanho do texto do botão */
+  }
+  .header-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .rounded-card {
+    border-radius: 30px; /* Arredondamento estilo iOS */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para profundidade */
+    width: 90%; /* Aumenta a largura do card */
+    max-width: 500px; /* Define uma largura máxima */
+  }
+  .signup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px; /* Aumenta o padding interno */
+  }
+  .signup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px; /* Aumenta o padding interno */
+  }
+  .signup-container {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 15px;
+  }
+  .signup-logo {
+    width: 180px; /* Aumenta o tamanho da logo */
+    margin-bottom: 25px;
+  }
+  .signup-title {
+    font-size: 2em; /* Aumenta o tamanho do título */
+    margin-bottom: 25px;
+  }
+  .terms-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    border-radius: 15px; /* Arredondamento da área dos termos */
+    margin-bottom: 1.25rem;
+    
+    ion-label {
+      font-size: 0.8rem;
+      color: #777;
+      flex: 1; /* Faz o texto ocupar o espaço restante */
+    }
+  
+    .terms-icon-container {
+      color: rgba(0, 255, 98, 0.877);
+      background-color: rgba(255, 255, 255, 0); /* Fundo transparente */
+      padding: 10px;
+      border-radius: 15px; /* Arredondamento do ícone */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30px; /* Altura do ícone */
+      width: 30px; /* Largura do ícone */
+    }
+    .icon-container {
+        color:  rgba(0, 255, 98, 0.877);
+        background-color: rgba(255, 255, 255, 0); /* Fundo semi-transparente */
+        padding: 10px;
+        border-radius: 15px; /* Arredondamento do ícone */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px; /* Altura do ícone */
+        width: 60px; /* Largura do ícone */
+      }
+      ;
+  }
+  
