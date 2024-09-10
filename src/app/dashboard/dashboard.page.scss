@@ -1,0 +1,74 @@
+.rounded-card {
+    border-radius: 20px; /* Mais arredondado */
+    margin: 10px 15px; /* Margem para separar os cards */
+    display: flex;
+    align-items: center;
+    padding: 10px; /* Padding interno */
+    /* Gradiente personalizado para cada cor */
+    &.ion-color-danger {
+      background: linear-gradient(to right, #b30000, #ff4d4d); /* Vermelho mais escuro para mais claro */
+    }
+    &.ion-color-primary {
+      background: linear-gradient(to right, #004080, #3399ff); /* Azul mais escuro para mais claro */
+    }
+    &.ion-color-tertiary {
+      background: linear-gradient(to right, #00264d, #004d99); /* Azul petróleo mais escuro para mais claro */
+    }
+    &.ion-color-medium {
+      background: linear-gradient(to right, #666666, #b3b3b3); /* Cinza mais escuro para mais claro */
+    }
+  }
+  
+  .card-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .icon-container {
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente */
+    padding: 10px;
+    border-radius: 15px; /* Arredondamento do ícone */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Altura total do card */
+    width: 60px; /* Largura fixa para o ícone */
+  }
+  
+  ion-icon {
+    font-size: 2em; /* Tamanho do ícone */
+  }
+  
+  .text-container {
+    margin-left: 15px; /* Espaço entre o ícone e o texto */
+    width: calc(100% - 75px); /* Ajusta a largura para evitar sobreposição */
+  }
+  
+  ion-card-title {
+    font-size: 1.2em; /* Tamanho do título */
+  }
+  
+  /* Estilo específico para o card de boas-vindas */
+  .welcome-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribui o espaço entre o texto e o ícone */
+  }
+  
+  .welcome-text-container {
+    width: calc(100% - 75px); /* Largura do texto ajustada para o ícone */
+  };
+  
+  .welcome-icon-container {
+    color:  rgba(0, 119, 255, 0.877);
+    background-color: rgba(255, 255, 255, 0); /* Fundo semi-transparente */
+    padding: 10px;
+    border-radius: 15px; /* Arredondamento do ícone */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px; /* Altura do ícone */
+    width: 60px; /* Largura do ícone */
+  }
+  ;

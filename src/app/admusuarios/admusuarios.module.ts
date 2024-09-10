@@ -13,8 +13,9 @@ import { AdmusuariosPage } from './admusuarios.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    AdmusuariosPageRoutingModule
+    AdmusuariosPageRoutingModule,
   ],
-  declarations: [AdmusuariosPage]
+  declarations: [AdmusuariosPage 
+  ]
 })
 export class AdmusuariosPageModule {}

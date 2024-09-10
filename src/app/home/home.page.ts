@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { LoadingController } from '@ionic/angular';
+import { RequisicaoService } from '../service/requisicao.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,23 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(
+    public requisicao_service:RequisicaoService,
+  ) { }
 
+  public usuarios:Array<any> = [];
+
+  ngOnInit() {
+    this.listar();
+  }
+
+   async listar(){
+
+
+
+
+    this.requisicao_service.get({
+      controller:'listarusuario'
+    })
+  }
 }

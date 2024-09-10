@@ -1,33 +1,21 @@
-
-
 <ion-content [fullscreen]="true">
-  <form>
-    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-0">
-      <div class="w-full bg-white rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 mt-5">
-        <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-          <img src="https://i.imgur.com/lZxL511.png" style="width: 150px" class="justify-center flex flex-col items-center justify-center mx-auto lg:py-0 mt-5 mb-10 ">
-
-          <p class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
-            Esqueceu sua senha?
-            </p>
-            
-            <div>
-              <label class="block mb-2 text-sm font-medium text-gray-900">
-                Email
-              </label>
-              <input placeholder="ivonesio@gmail.com" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" id="email" type="text">
+  <div class="reset-password-container">
+    <ion-card class="rounded-ios-card">
+      <div class="reset-password-content">
+        <ion-card-header class="header-center">
+          <img src="https://i.imgur.com/t4I9hO1.png" class="reset-password-logo" />
+          <ion-card-title class="reset-password-title">Esqueceu sua senha?</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <form>
+            <div class="input-group">
+              <label class="input-label" for="email">Email</label>
+              <ion-input type="text" id="email" placeholder="ivonesio@gmail.com" required></ion-input>
             </div>
-
-            <button
-            class="w-full py-2 px-4 bg-gradient-to-r from-blue-400 to-green-500 hover:bg-blue-700 rounded-md shadow-lg text-white font-semibold transition duration-200"
-            type="submit"
-          >
-          Redefinir senha
-        </button>
-
-          
-        </div>
+            <ion-button expand="block" class="reset-password-button" type="submit">Redefinir senha</ion-button>
+          </form>
+        </ion-card-content>
       </div>
-    </div></form>
-  
+    </ion-card>
+  </div>
 </ion-content>

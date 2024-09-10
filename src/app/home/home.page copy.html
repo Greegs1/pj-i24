@@ -1,0 +1,65 @@
+<div class="  flex justify-center items-center mt-5">
+
+      <a href="#"
+        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Olá, Bem vindo!</h5>
+        <p class="font-normal text-gray-700 dark:text-gray-400"> <ion-icon name="person-outline"></ion-icon> usuario</p>
+      </a>
+
+    </div>
+
+    <div class="container mx-auto px-4 py-8 max-w-md">
+      <div class="grid grid-cols-2 gap-6">
+        <div class="bg-gradient-to-r from-red-500 to-red-700 rounded-3xl	 p-6 shadow-lg text-white"
+          routerLink="/energia">
+          <h2 class="text-xl font-semibold mb-2">ALERTAS</h2>
+          <p class="text-gray-300 text-xs	">Exibir alertas de manuntenções pendentes...</p>
+        </div>
+        <div class="bg-gradient-to-r from-blue-500 to-teal-500 rounded-3xl	 p-6 shadow-lg text-white"
+          routerLink="/fatura">
+          <h2 class="text-xl font-semibold mb-2">HORÁRIOS</h2>
+          <p class="text-gray-300 text-xs	">Exibir horários de manutenção na rede...</p>
+        </div>
+        <div class="bg-gradient-to-r from-green-500 to-lime-500 rounded-3xl	 p-6 shadow-lg text-white"
+          routerLink="/config">
+          <h2 class="text-xl font-semibold mb-2">AJUSTES</h2>
+          <p class="text-gray-200 text-xs">Exibir configurações do aplicativo...</p>
+        </div>
+
+        <div class="bg-gradient-to-r from-yellow-500 to-amber-500 rounded-3xl	 p-6 shadow-lg text-white "
+          routerLink="/faleconosco">
+          <h2 class="text-xl font-semibold mb-2">CENTRAL DE AJUDA</h2>
+          <p class="text-gray-200 text-xs">Fale conosco...</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+      <dl class="text-3xl	text-center text-dark"><ion-icon name="battery-charging"></ion-icon><br>Notificações de <b
+          class="text-red-800">Interrupções</b>
+        <dt class="text-3xl	text-center text-dark"></dt> do Sistema
+      </dl>
+      <br>
+      <a href="#" *ngFor="let usuario of usuarios"
+        class="bg-gradient-to-r from-yellow-500 to-amber-600 rounded-3xl	 p-6 shadow-lg text-white">
+        <h2 class="text-xl"><B>Cidade </B></h2>{{usuario.cidade}}<br>
+        <h2 class="text-xl"><B>Bairro </B></h2>{{usuario.bairro}}<br>
+        <h2 class="text-xl"><B>Rua </B></h2>{{usuario.rua}}<br>
+        <h2 class="text-xl"><B>Status </B></h2>Manutenção de Rotina
+
+
+      </a>
+      <a href="#" *ngFor="let usuario of usuarios"
+        class="bg-gradient-to-r from-red-500 to-red-900 rounded-3xl	 p-6 shadow-lg text-white">
+        <h2 class="text-xl"><B>Cidade </B></h2>{{usuario.cidade}}<br>
+        <h2 class="text-xl"><B>Bairro </B></h2>{{usuario.bairro}}<br>
+        <h2 class="text-xl"><B>Rua </B></h2>{{usuario.rua}}<br>
+        <h2 class="text-xl"><B>Status </B></h2>Manutenção
+        <h2 class="text-xl"><B>Duração Prevista </B></h2>5h
+
+
+
+      </a>
+
+    </div>
