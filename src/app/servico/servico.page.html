@@ -1,35 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Serviço</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 
+<app-menuadm content-id="home-content"></app-menuadm>
 
-<ion-content [fullscreen]="true">
-  
+<ion-content [fullscreen]="true" id="home-content">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tipo Serviço</ion-title>
+    </ion-toolbar>
+  </ion-header>
   <form>
-    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-0">
-      <div class="w-full bg-white rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 mt-5">
-        <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-
-          <ion-icon class="text-black text-3xl" routerLink="/home" name="return-up-back-outline"></ion-icon>
-
-          <p class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
-            Tipo de serviço
-            </p>
-            
-            <div>
-              <label class="block mb-2 text-sm font-medium text-gray-900">
-                Descrição
-              </label>
-              <input placeholder="Manutenção de rede" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" id="email" type="text">
-            </div>
-
-            <button
-            class="w-full py-2 px-4 bg-gradient-to-r from-blue-400 to-green-500 hover:bg-blue-700 rounded-md shadow-lg text-white font-semibold transition duration-200"
-            type="submit"
-          >
-         Cadastrar
-        </button>
-
-          
+    <div class="form-container">
+      <ion-card class="rounded-card">
+        <div class="form-content">
+          <div class="input-group">
+            <label for="descricao">Cadastrar descrição</label>
+            <input placeholder="Manutenção de rede" class="input-field" id="descricao" type="text">
+          </div>
+          <button class="submit-btn" type="submit">Cadastrar</button>
         </div>
-      </div>
-    </div></form>
-  
+      </ion-card>
+    </div>
+  </form>
 </ion-content>

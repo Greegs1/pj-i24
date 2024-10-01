@@ -1,47 +1,37 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>horarios</ion-title>
+    <ion-title>Manutenção de Rede</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<app-menu content-id="maintenance-content"></app-menu>
+
+<ion-content [fullscreen]="true" id="maintenance-content">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">horarios</ion-title>
+      <ion-title size="large">Horários</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <div class="maintenance-schedule">
+    <ion-list>
+      <ion-list-header>
+        <ion-label>Próximas Manutenções</ion-label>
+      </ion-list-header>
+
+      <ion-item *ngFor="let maintenance of maintenanceSchedule">
+        <ion-label>
+          <h2>{{ maintenance.area }}</h2>
+          <p>Data: {{ maintenance.date }}</p>
+          <p>Horário: {{ maintenance.startTime }} - {{ maintenance.endTime }}</p>
+        </ion-label>
+        <ion-badge slot="end" [color]="maintenance.status === 'Agendado' ? 'primary' : 'success'">
+          {{ maintenance.status }}
+        </ion-badge>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>
-<!--
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Horários</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Horários Disponíveis</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Lista de Horários</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-grid>
-        <ion-row>
-          <ion-col size="4"><strong>Data</strong></ion-col>
-          <ion-col size="4"><strong>Hora</strong></ion-col>
-          <ion-col size="4"><strong>Status</strong></ion-col>
-        </ion-row>
-        <ion-row *ngFor="let horario of horarios">
-          <ion-col size="4">{{ horario.data }}</ion-col>
-          <ion-col size="4">{{ horario.hora }}</ion-col>
-          <ion-col size="4">{{ horario.status }}</ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card-content>
-  </ion-card>
-</ion-content>--->

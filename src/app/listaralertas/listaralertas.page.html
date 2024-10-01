@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Alertas</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<app-menuadm content-id="home-content"></app-menuadm>
+
+<ion-content [fullscreen]="true" id="home-content">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Alertas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="form-container">
+    <ion-card class="rounded-card">
+      <div class="form-content">
+        <div class="alert-list-container">
+          <h2 class="title">Lista de Alertas</h2>
+          
+          <ion-list class="alert-list">
+            <!-- Listagem de alertas -->
+            <ion-item *ngFor="let alerta of cadastroalertas" class="alert-item">
+              <ion-label>
+                <h2>{{ alerta.titulo }}</h2>
+                <p>Data: {{ alerta.data }}</p>
+                <p>Status: {{ alerta.status }}</p>
+                <p>Cidade: {{ alerta.cidade }}</p>
+                <p>Bairro: {{ alerta.bairro }}</p>
+                <p>Rua: {{ alerta.rua }}</p>
+              </ion-label>
+              <div class="icon-group">
+                <!-- Comentando as ações de editar e excluir -->
+                <!--
+                <ion-icon name="create" (click)="editarAlerta(alerta.id)"></ion-icon>
+                <ion-icon name="trash" (click)="excluirAlerta(alerta.id)"></ion-icon>
+                -->
+              </div>
+            </ion-item>
+          </ion-list>
+        </div>
+
+        <button class="submit-btn" routerLink="/cadastroalerta" type="button">
+          Cadastrar novo alerta
+        </button>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

@@ -10,6 +10,7 @@ register();
 })
 export class AppComponent {
   constructor() {}
+  
 }
 export class ExampleComponent {
   menuType: string = 'overlay';

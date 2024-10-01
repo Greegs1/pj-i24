@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  // outras rotas...
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
@@ -78,6 +79,26 @@ const routes: Routes = [
   {
     path: 'dashboard',
     loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+  {
+    path: 'menuadm',
+    loadChildren: () => import('./menuadm/menuadm.module').then( m => m.MenuadmPageModule)
+  },
+  {
+    path: 'alertas',
+    loadChildren: () => import('./alertas/alertas.module').then( m => m.AlertasPageModule)
+  },
+  {
+    path: 'admalertas',
+    loadChildren: () => import('./admalertas/admalertas.module').then( m => m.AdmalertasPageModule)
+  },
+  {
+    path: 'termos',
+    loadChildren: () => import('./termos/termos.module').then( m => m.TermosPageModule)
+  },
+  {
+    path: 'listaralertas',
+    loadChildren: () => import('./listaralertas/listaralertas.module').then( m => m.ListaralertasPageModule)
   },
 ];
 

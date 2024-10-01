@@ -1,11 +1,88 @@
+ion-menu-button {
+  --color: #03e35a; // Define a cor do ícone do menu como verde
+}
+
 ion-menu::part(backdrop) {
-    background-color: rgba(8, 253, 0, 0.5);
+  background-color: #03e35a;
+}
+
+ion-menu::part(container) {
+  border-radius: 0 20px 20px 0;  
+  box-shadow: 4px 0px 16px rgba(0, 117, 16, 0.144);
+  background: linear-gradient(145deg, #f0f0f0, #e0e0e0);
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-menu-content {
+  padding: 16px;
+  font-size: 22px;
+  flex-grow: 1;
+}
+
+ion-item.menu-item {
+  border-radius: 12px;
+  margin: 10px 0;
+  padding: 12px;
+  background: linear-gradient(145deg, #ffffff00, #d4d4d400);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: rgb(0, 0, 0);
   }
-  
-  ion-menu::part(container) {
-    border-radius: 0 20px 20px 0;  
-    box-shadow: 4px 0px 16px rgba(0, 117, 16, 0.144);
+
+  ion-icon {
+    font-size: 20px;
+    color: #03e35a;
+    margin-right: 8px;
   }
-  ion-padding {
-    font-size: 25px;
+}
+
+.login-admin-container {
+  padding: 16px;
+  background-color: #000000;
+  border-radius: 0 0 20px 0;
+}
+
+ion-item.login-admin-item {
+  border-radius: 12px;
+  padding: 12px;
+  background: transparent;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: rgba(200, 200, 200, 0.568) !important; // Cor cinza com baixa opacidade
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: rgba(200, 200, 200, 0.1); // Fundo cinza com opacidade muito baixa ao hover
   }
+
+  ion-icon {
+    font-size: 20px;
+    color: rgba(200, 200, 200, 0.568); // Cor cinza com baixa opacidade para o ícone
+    margin-right: 8px;
+  }
+}
+
+ion-toolbar {
+  background-color: #000000;
+  border-radius: 0 20px 0 0;
+}
+
+ion-title {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+ion-content.custom-menu-content {
+  font-size: 20px;
+  background-color: #000000;
+}

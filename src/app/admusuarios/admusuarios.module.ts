@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { AdmusuariosPageRoutingModule } from './admusuarios-routing.module';
 
 import { AdmusuariosPage } from './admusuarios.page';
+import { MenuPageModule } from '../menu/menu.module';
+import { MenuadmPageModule } from '../menuadm/menuadm.module';
 
 @NgModule({
   imports: [
@@ -14,6 +16,7 @@ import { AdmusuariosPage } from './admusuarios.page';
     FormsModule,
     IonicModule,
     AdmusuariosPageRoutingModule,
+    MenuadmPageModule
   ],
   declarations: [AdmusuariosPage 
   ]

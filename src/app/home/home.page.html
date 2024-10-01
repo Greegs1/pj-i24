@@ -1,10 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>Home</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true">
+<app-menu content-id="home-content"></app-menu>
+<ion-content [fullscreen]="true" id="home-content">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Home</ion-title>
@@ -28,7 +31,7 @@
   </ion-card>
 
   <!-- Card ALERTAS -->
-  <ion-card button color="danger" class="rounded-card">
+  <ion-card button color="danger" class="rounded-card" routerLink="/alertas">
     <div class="card-content">
       <div class="icon-container">
         <ion-icon name="alert-circle-outline"></ion-icon>
@@ -45,7 +48,7 @@
   </ion-card>
 
   <!-- Card HORÁRIOS -->
-  <ion-card button color="primary" class="rounded-card">
+  <ion-card button color="primary" class="rounded-card" routerLink="/horarios">
     <div class="card-content">
       <div class="icon-container">
         <ion-icon name="time-outline"></ion-icon>

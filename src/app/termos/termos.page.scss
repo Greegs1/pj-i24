@@ -1,0 +1,65 @@
+/* Card de introdução */
+.intro-card {
+    border-radius: 15px;
+    margin: 15px;
+    background-color: #f0f9ff; /* Fundo azul claro */
+    ion-card-title {
+      color: #00aeff; /* Título azul escuro */
+    }
+  }
+  
+  /* Cards de seções */
+  .termos-card {
+    border-radius: 15px;
+    margin: 15px;
+    background-color: #ffffff2f; /* Fundo branco padrão */
+    ion-card-content {
+      padding: 15px;
+    }
+  }
+  
+  /* Estilo para os títulos das seções */
+  .titulo-secao {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos de cores para cada seção */
+  .secao-1 {
+    color: #0080ff; /* Azul escuro */
+  }
+  .secao-2 {
+    color: #00ffff; /* Verde água */
+  }
+  .secao-3 {
+    color: #ff6600; /* Laranja */
+  }
+  .secao-4 {
+    color: #d24bff; /* Roxo */
+  }
+  .secao-5 {
+    color: #ff3333; /* Vermelho */
+  }
+  .secao-6 {
+    color: #00ff00; /* Verde escuro */
+  }
+  .secao-7 {
+    color: #ffb700; /* Ouro */
+  }
+  .secao-8 {
+    color: #008cff; /* Azul aço */
+  }
+  .secao-9 {
+    color: #fa5757; /* Vermelho escuro */
+  }
+  .secao-10 {
+    color: #aa00ff; /* Roxo médio */
+  }
+  .secao-11 {
+    color: #00ff6e; /* Verde mar */
+  }
+  .secao-12 {
+    color: #0071e2; /* Azul dodger */
+  }

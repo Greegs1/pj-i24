@@ -1,0 +1,31 @@
+.alertas-lista {
+  padding: 16px;
+
+  ion-list {
+    background: transparent;
+  }
+
+  ion-item {
+    --background: var(--ion-color-light);
+    --border-radius: 8px;
+    margin-bottom: 12px;
+  }
+
+  ion-badge {
+    --padding-start: 8px;
+    --padding-end: 8px;
+    --padding-top: 4px;
+    --padding-bottom: 4px;
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+
+  p {
+    margin: 2px 0;
+    color: var(--ion-color-medium);
+  }
+}

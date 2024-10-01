@@ -4,72 +4,98 @@
       <div class="signup-content">
         <ion-card-header class="header-center">
           <img src="https://i.imgur.com/t4I9hO1.png" class="signup-logo" />
-          <ion-card-title class="signup-title">Entre na sua conta</ion-card-title>
+          <ion-card-title class="signup-title">Cadastrar conta</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          <form>
-            <div class="input-group">
-              <label class="input-label" for="nome">Nome completo</label>
-              <ion-input type="text" id="nome" placeholder="Ivonésio Gonçalves" required></ion-input>
-            </div>
-            <div class="input-group">
-              <label class="input-label" for="cpf">CPF</label>
-              <ion-input type="text" id="cpf" placeholder="123.456.789-12" required></ion-input>
-            </div>
-            <div class="input-group">
-              <label class="input-label" for="email">Email</label>
-              <ion-input type="email" id="email" placeholder="ivonesio@gmail.com" required></ion-input>
-            </div>
-            <div class="input-group">
-              <label class="input-label" for="telefone">Telefone</label>
-              <ion-input type="text" id="telefone" placeholder="(48) 12345-6789" required></ion-input>
-            </div>
-            <div class="input-group">
-              <label class="input-label" for="cep">CEP</label>
-              <ion-input type="text" id="cep" placeholder="88888-888" required></ion-input>
-            </div>
-            <div class="input-group">
-              <label class="input-label" for="rua">Rua</label>
-              <ion-input type="text" id="rua" placeholder="Henrique Lage" required></ion-input>
-            </div>
-            <div class="input-group">
-              <label class="input-label" for="bairro">Bairro</label>
-              <ion-input type="text" id="bairro" placeholder="Mina do Mato" required></ion-input>
-            </div>
-            <div class="input-group">
-              <label class="input-label" for="cidade">Cidade</label>
-              <ion-input type="text" id="cidade" placeholder="Criciúma" required></ion-input>
-            </div>
-            <div class="input-group">
-              <label class="input-label" for="estado">UF</label>
-              <ion-input type="text" id="estado" placeholder="Estado" required></ion-input>
-            </div>
-            <div class="input-group">
-              <label class="input-label" for="numero">Número</label>
-              <ion-input type="number" id="numero" placeholder="1597" required></ion-input>
-            </div>
-            <div class="input-group">
-              <label class="input-label" for="senha">Senha</label>
-              <ion-input type="password" id="senha" placeholder="••••••••" required></ion-input>
-            </div>
-            <div class="terms-text">
-              <ion-label>
-                  <div class="welcome-content">
-                    <div class="welcome-text-container">
-                      <div class="welcome-icon-container">
-                        <ion-icon name="checkmark"></ion-icon> </div>
-                    </div>
-                      <ion-card-content>
-                        <p>                Ao prosseguir você concorda com todos os termos e condições do aplicativo.                        </p>
-                      </ion-card-content>
-                    </div>
 
-              </ion-label>
-            </div>
-            <ion-button expand="block" class="button" (click)="salvar()">
-              Criar conta
-            </ion-button>
-          </form>
+          <!-- Formulário de cadastro -->
+          <ion-item>
+            <ion-label position="floating">Nome</ion-label>
+            <ion-input [(ngModel)]="nome" placeholder="Digite seu nome completo" id="nome" type="text" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">CPF</ion-label>
+            <ion-input [(ngModel)]="cpfj" placeholder="Digite seu CPF" id="cpfj" type="text" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">E-mail</ion-label>
+            <ion-input [(ngModel)]="email" placeholder="Digite seu e-mail" id="email" type="email" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Telefone</ion-label>
+            <ion-input [(ngModel)]="telefone" placeholder="Digite seu telefone" id="telefone" type="tel" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">CEP</ion-label>
+            <ion-input [(ngModel)]="cep" placeholder="Digite seu CEP" id="cep" type="text" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">UF</ion-label>
+            <ion-select [(ngModel)]="estado" id="estado" required>
+              <ion-select-option *ngFor="let estado of estados" [value]="estado">{{ estado }}</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Cidade</ion-label>
+            <ion-select [(ngModel)]="cidade" id="cidade" required>
+              <ion-select-option *ngFor="let cidade of cidades" [value]="cidade">{{ cidade }}</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Bairro</ion-label>
+            <ion-input [(ngModel)]="bairro" placeholder="Digite seu bairro" id="bairro" type="text" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Rua</ion-label>
+            <ion-input [(ngModel)]="rua" placeholder="Digite sua rua" id="rua" type="text" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Número</ion-label>
+            <ion-input [(ngModel)]="numero" placeholder="Digite o número" id="numero" type="number" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Senha</ion-label>
+            <ion-input [(ngModel)]="senha" placeholder="Digite sua senha" id="senha" type="password" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Confirmar Senha</ion-label>
+            <ion-input [(ngModel)]="confirmarSenha" placeholder="Confirme sua senha" id="confirmPassword" type="password" required></ion-input>
+          </ion-item>
+
+          <!-- Termos e condições -->
+          <div class="terms-text">
+            <ion-label>
+              <div class="welcome-content">
+                <div class="welcome-text-container">
+                  <div class="welcome-icon-container">
+                    <ion-icon name="checkmark"></ion-icon>
+                  </div>
+                </div>
+                <p>Ao finalizar o cadastro você está ciente que concorda com todos os <u routerLink="/termos" class="clicktermos"><b>termos e condições do aplicativo</b></u>.</p>
+              </div>
+            </ion-label>
+          </div>
+
+          <!-- Mensagem de erro dentro de um ion-card -->
+          <ion-card *ngIf="mensagemErro" class="error-card">
+            <ion-card-content class="error-content">
+              {{ mensagemErro }}
+            </ion-card-content>
+          </ion-card>
+
+          <ion-button expand="block" class="button" (click)="salvar()">Criar conta</ion-button>
+
         </ion-card-content>
       </div>
     </ion-card>

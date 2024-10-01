@@ -8,6 +8,7 @@ import { DashboardPageRoutingModule } from './dashboard-routing.module';
 
 import { DashboardPage } from './dashboard.page';
 import { ChartModule } from 'primeng/chart';
+import { MenuadmPageModule } from '../menuadm/menuadm.module';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { ChartModule } from 'primeng/chart';
     FormsModule,
     IonicModule,
     DashboardPageRoutingModule,
-    ChartModule
+    ChartModule,
+    MenuadmPageModule,
   ],
   declarations: [DashboardPage]
 })
