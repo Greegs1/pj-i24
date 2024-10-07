@@ -108,6 +108,14 @@ const routes: Routes = [
     path: 'editarusuario',
     loadChildren: () => import('./editarusuario/editarusuario.module').then(m => m.EditarusuarioPageModule)
   },
+  {
+    path: 'sac',
+    loadChildren: () => import('./sac/sac.module').then( m => m.SacPageModule)
+  },
+  {
+    path: 'faq',
+    loadChildren: () => import('./faq/faq.module').then( m => m.FaqPageModule)
+  },
 ];
 
 @NgModule({

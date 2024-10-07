@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { HorariosPageRoutingModule } from './horarios-routing.module';
+import { SacPageRoutingModule } from './sac-routing.module';
 
-import { HorariosPage } from './horarios.page';
+import { SacPage } from './sac.page';
 import { MenuPageModule } from '../menu/menu.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { MenuPageModule } from '../menu/menu.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    HorariosPageRoutingModule,
+    SacPageRoutingModule,
     MenuPageModule
   ],
-  declarations: [HorariosPage]
+  declarations: [SacPage]
 })
-export class HorariosPageModule {}
+export class SacPageModule {}

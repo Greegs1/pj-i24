@@ -1,0 +1,83 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>FAQ</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<app-menu content-id="faq-content"></app-menu>
+
+<ion-content [fullscreen]="true" id="faq-content">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Perguntas Frequentes</ion-title>
+    </ion-toolbar>
+    
+  </ion-header>
+  <!-- FAQ Section -->
+  <ion-card class="faq-card">
+    <ion-card-header>
+      <ion-card-title>O que devo fazer se houver uma interrupção de energia?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Verifique se a interrupção afeta apenas sua residência ou toda a região. Se for um problema maior, você pode verificar notificações no aplicativo ou entrar em contato com o suporte.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="faq-card">
+    <ion-card-header>
+      <ion-card-title>Como posso relatar uma interrupção de energia?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Basta abrir o aplicativo e clicar em "Relatar Interrupção". Se o problema não estiver listado, ligue para o nosso suporte técnico.</p>
+      <ion-button fill="clear" routerLink="/sac" expand="full">
+        Relatar Interrupção
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="faq-card">
+    <ion-card-header>
+      <ion-card-title>Quando o serviço será restaurado?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>A duração da interrupção pode variar dependendo da causa. Verifique as notificações no aplicativo para atualizações em tempo real sobre a restauração do serviço.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="faq-card">
+    <ion-card-header>
+      <ion-card-title>Como posso receber notificações sobre interrupções?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Certifique-se de ativar as notificações do aplicativo em seu dispositivo. Vá para as configurações de notificação e ative as atualizações de interrupção de energia.</p>
+      <ion-button fill="clear" routerLink="/configuracoes" expand="full">
+        Configurar Notificações
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="faq-card">
+    <ion-card-header>
+      <ion-card-title>Interrupções programadas - Como saber?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>As interrupções programadas são notificadas com antecedência através do aplicativo. Verifique a seção de alertas para ver se sua área será afetada.</p>
+      <ion-button fill="clear" routerLink="/alertas" expand="full">
+        Verificar Interrupções Programadas
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="faq-card">
+    <ion-card-header>
+      <ion-card-title>Preciso fazer algo após a interrupção?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Após o restabelecimento da energia, recomendamos que você verifique seus aparelhos eletrônicos e religue-os gradualmente para evitar sobrecarga.</p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

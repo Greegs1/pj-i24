@@ -15,7 +15,7 @@ import { MenuadmPageModule } from '../menuadm/menuadm.module';
     FormsModule,
     IonicModule,
     ListaralertasPageRoutingModule,
-    MenuadmPageModule
+    MenuadmPageModule,
   ],
   declarations: [ListaralertasPage]
 })

@@ -1,31 +1,41 @@
-.maintenance-schedule {
-    padding: 16px;
+.rounded-card {
+  border-radius: 20px;
+  margin: 10px 15px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
   
-    ion-list {
-      background: transparent;
-    }
-  
-    ion-item {
-      --background: var(--ion-color-light);
-      --border-radius: 8px;
-      margin-bottom: 12px;
-    }
-  
-    ion-badge {
-      --padding-start: 8px;
-      --padding-end: 8px;
-      --padding-top: 4px;
-      --padding-bottom: 4px;
-    }
-  
-    h2 {
-      font-weight: bold;
-      font-size: 18px;
-      margin-bottom: 4px;
-    }
-  
-    p {
-      margin: 2px 0;
-      color: var(--ion-color-medium);
-    }
+  &.ion-color-primary {
+    background: linear-gradient(to right, #004080, #3399ff);
   }
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.icon-container {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 60px;
+}
+
+ion-icon {
+  font-size: 2em;
+}
+
+.text-container {
+  margin-left: 15px;
+  width: calc(100% - 75px);
+}
+
+ion-card-title {
+  font-size: 1.2em;
+}

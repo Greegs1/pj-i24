@@ -1,0 +1,102 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>S.A.C - Atendimento ao Cliente</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<app-menu content-id="sac-content"></app-menu>
+
+<ion-content [fullscreen]="true" id="sac-content">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">S.A.C</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Card de Atendimento ao Cliente -->
+  <ion-card class="rounded-card ion-color-primary">
+    <div class="card-content">
+      <div class="icon-container">
+        <ion-icon name="headset-outline"></ion-icon>
+      </div>
+      <div class="text-container">
+        <ion-card-header>
+          <ion-card-title>Atendimento ao Cliente</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Disponível 24/7</p>
+          <p>Telefone: (11) 1234-5678</p>
+          <p>Email: suporte-empresa.com</p>
+          <ion-button fill="clear" href="tel:12345678" expand="full">
+            Ligar Agora
+          </ion-button>
+
+          <ion-button fill="clear" href="mailto:suporte@empresa.com" expand="full">
+            Enviar Email
+          </ion-button>
+          <ion-button fill="clear" class="teste156" href="tel:12345678" expand="full">
+            <b>Relatar Interrupção</b>
+          </ion-button>
+        </ion-card-content>
+      </div>
+    </div>
+  </ion-card>
+
+  <!-- Card de Suporte Técnico -->
+  <ion-card class="rounded-card">
+    <div class="card-content">
+      <div class="icon-container">
+        <ion-icon name="construct-outline"></ion-icon>
+      </div>
+      <div class="text-container">
+        <ion-card-header>
+          <ion-card-title>Suporte Técnico</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Segunda a Sexta: 8h - 18h</p>
+          <p>Telefone: (11) 9876-5432</p>
+        </ion-card-content>
+      </div>
+    </div>
+  </ion-card>
+
+  <!-- Card de Reclamações -->
+  <ion-card class="rounded-card">
+    <div class="card-content">
+      <div class="icon-container">
+        <ion-icon name="megaphone-outline"></ion-icon>
+      </div>
+      <div class="text-container">
+        <ion-card-header>
+          <ion-card-title>Reclamações</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Você pode registrar sua reclamação a qualquer momento.</p>
+        </ion-card-content>
+      </div>
+    </div>
+  </ion-card>
+
+  <!-- Card de Perguntas Frequentes -->
+  <ion-card class="rounded-card">
+    <div class="card-content">
+      <div class="icon-container">
+        <ion-icon name="help-circle-outline"></ion-icon>
+      </div>
+      <div class="text-container">
+        <ion-card-header>
+          <ion-card-title>Perguntas Frequentes</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Encontre respostas para as dúvidas mais comuns.</p>
+          <ion-button fill="clear" routerLink="/faq" expand="full">
+            Acessar FAQ
+          </ion-button>
+        </ion-card-content>
+      </div>
+    </div>
+  </ion-card>
+</ion-content>
