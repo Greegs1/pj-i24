@@ -22,13 +22,22 @@
         <ion-icon name="settings" slot="start"></ion-icon>
         Ajustes
       </ion-item>
+      <ion-item class="menu-item" (click)="go('/sac')">
+        <ion-icon name="help-sharp" slot="start"></ion-icon>
+        Ajuda
+      </ion-item>
+
 
     </ion-list>
   </ion-content>
   <div class="login-admin-container">
     <ion-item class="login-admin-item" (click)="go('/login')">
       <ion-icon name="log-in" slot="start"></ion-icon>
-      Login | Admin
+      Login 
+    </ion-item>
+    <ion-item class="login-admin-item" (click)="go('/dashboard')">
+      <ion-icon name="code-slash-outline" slot="start"></ion-icon>
+             Modo Admin
     </ion-item>
     <ion-item class="login-admin-item" (click)="go('/termos')">
       <ion-icon name="document" slot="start"></ion-icon>

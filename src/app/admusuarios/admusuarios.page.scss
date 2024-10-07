@@ -36,7 +36,6 @@
     width: 100%;
     max-width: 300px; /* Mantém o botão com uma largura mais controlada */
     padding: 12px;
-    background: linear-gradient(to right, #004080, #3399ff); /* Azul mais escuro para mais claro */
     color: white;
     font-weight: bold;
     border: none;
@@ -45,9 +44,7 @@
     transition: background 0.3s ease;
   }
   
-  .submit-btn:hover {
-    background: linear-gradient(to right, #00c6ff, #0072ff);
-  }
+
   
   @media (max-width: 768px) {
     .rounded-card {

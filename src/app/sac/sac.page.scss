@@ -1,0 +1,51 @@
+.rounded-card {
+    border-radius: 20px;
+    margin: 10px 15px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    
+    &.ion-color-primary {
+      background: linear-gradient(to right, #004080, #3399ff);
+      color: white;
+    }
+  }
+  
+  .card-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .icon-container {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 60px;
+  }
+  
+  ion-icon {
+    font-size: 2em;
+    color: white;
+  }
+  
+  .text-container {
+    margin-left: 15px;
+    width: calc(100% - 75px);
+  }
+  
+  ion-card-title {
+    font-size: 1.2em;
+  }
+  
+  ion-button {
+    margin-top: 10px;
+    color: rgba(241, 241, 241, 0.774);
+  }
+ .teste156{
+    color: rgb(16, 0, 88)!important;
+ }
