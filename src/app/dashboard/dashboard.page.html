@@ -1,15 +1,19 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Painel Admin</ion-title>
+    <ion-title>Admin</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true">
+<app-menuadm content-id="home-content"></app-menuadm>
+<ion-content [fullscreen]="true" id="home-content">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Painel Admin</ion-title>
+      <ion-title size="large">Dashboard</ion-title>
     </ion-toolbar>
   </ion-header>
+
 
   <!-- Card de Boas-Vindas -->
   <ion-card class="welcome-card rounded-card">
@@ -28,7 +32,7 @@
   </ion-card>
 
   <!-- Card ALERTAS -->
-  <ion-card button color="primary" class="rounded-card">
+  <ion-card button color="primary" class="rounded-card"  routerLink="/listaralertas">
     <div class="card-content">
       <div class="icon-container">
         <ion-icon name="construct"></ion-icon>      </div>
@@ -60,21 +64,6 @@
   </ion-card>
 
   <!-- Card AJUSTES -->
-  <ion-card button color="primary" class="rounded-card" routerLink="/configuracoes">
-    <div class="card-content">
-      <div class="icon-container">
-        <ion-icon name="settings-outline"></ion-icon>
-      </div>
-      <div class="text-container">
-        <ion-card-header>
-          <ion-card-title>AJUSTES GERAIS</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          <p>Configurações gerais do sistema</p>
-        </ion-card-content>
-      </div>
-    </div>
-  </ion-card>
 
   <ion-card color="" class="rounded-card">
     <div class="card-content">
@@ -86,4 +75,29 @@
       </div>
     </div>
   </ion-card>
+
+  
+  <ion-card color="" class="rounded-card">
+    <div class="card-content">
+      <div class="text-container">
+        <ion-card-header>
+          
+          <p-chart type="bar" [data]="data1 " ariaLabbel="Data" />
+        </ion-card-header>
+      </div>
+    </div>
+  </ion-card>
+  <div class="  flex justify-center items-center mt-5">
+
+    <ion-list>
+      <ion-item>
+      <ion-select label="Idioma" [(ngModel)]="idioma" (ionChange)="setarIdioma()">
+      <ion-select-option value="pt_br">Português (Brasil)</ion-select-option>
+      <ion-select-option value="en_us">Inglês (Estados Unidos) </ion-select-option>
+      </ion-select>
+      </ion-item>
+      </ion-list>
+
+  </div>
 </ion-content>
+

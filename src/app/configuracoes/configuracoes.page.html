@@ -1,8 +1,19 @@
-<div class="ion-page" id="main-content">
-  <ion-content class="ion-padding">
-    <ion-menu-toggle>
-      <ion-button color="light"><ion-icon name="menu-outline"></ion-icon></ion-button>
-    </ion-menu-toggle>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Configurações</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<app-menu content-id="home-content"></app-menu>
+<ion-content [fullscreen]="true" id="home-content">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Configurações</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
     <div class="  flex justify-center items-center mt-5">
 
       <ion-list>

@@ -1,30 +1,38 @@
-<!---<ion-menu contentId="main-content">
-    <ion-header>
-      <ion-toolbar color="success">
-        <ion-title>Menu </ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content class="ion-padding">    
-      <a routerLink="/home"> Inicio</a>
-      <br>
-      <hr>
-      <a routerLink="/servico">Cadastrar Serviços</a>
-      <br>
-      <hr>
-      <a routerLink="/admusuarios">Lista de Usuario</a>
-      <br>
-      <hr>
-      <a routerLink="/configuracoes">Ajustes</a>
-      <br>
-      <hr></ion-content>
-  </ion-menu>
-  <div class="ion-page" id="main-content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-menu-button></ion-menu-button>
-        </ion-buttons>
-        <ion-title>Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-  </div>--> 
+<ion-menu [contentId]="content_id">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding custom-menu-content">
+    <ion-list>
+      <ion-item class="menu-item" (click)="go('/home')">
+        <ion-icon name="home" slot="start"></ion-icon>
+        Home
+      </ion-item>
+      <ion-item class="menu-item" (click)="go('/alertas')">
+        <ion-icon name="alert-circle" slot="start"></ion-icon>
+        Alertas
+      </ion-item>
+      <ion-item class="menu-item" (click)="go('/horarios')">
+        <ion-icon name="time-sharp" slot="start"></ion-icon>
+        Horários
+      </ion-item>
+      <ion-item class="menu-item" (click)="go('/configuracoes')">
+        <ion-icon name="settings" slot="start"></ion-icon>
+        Ajustes
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+  <div class="login-admin-container">
+    <ion-item class="login-admin-item" (click)="go('/login')">
+      <ion-icon name="log-in" slot="start"></ion-icon>
+      Login | Admin
+    </ion-item>
+    <ion-item class="login-admin-item" (click)="go('/termos')">
+      <ion-icon name="document" slot="start"></ion-icon>
+      Termos de uso
+    </ion-item>
+  </div>
+</ion-menu>

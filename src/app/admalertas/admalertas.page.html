@@ -1,0 +1,69 @@
+<ion-content [fullscreen]="true">
+  <div class="alerta-container">
+    <ion-card class="rounded-card">
+      <div class="alerta-content">
+        <ion-card-header class="header-center">
+          <img src="https://i.imgur.com/t4I9hO1.png" class="alerta-logo" />
+          <ion-card-title class="alerta-title">Registrar Alerta</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+
+          <!-- Formulário de cadastro de alerta -->
+          <ion-item>
+            <ion-label position="floating">Tipo</ion-label>
+            <ion-select [(ngModel)]="titulo" placeholder="Selecione o tipo de interrupção" id="titulo" required>
+              <ion-select-option *ngFor="let option of tituloOptions" [value]="option">{{ option }}</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Data</ion-label>
+            <ion-datetime [(ngModel)]="data" display-format="YYYY-MM-DD HH:mm:ss" [min]="minDate"></ion-datetime>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Rua</ion-label>
+            <ion-input [(ngModel)]="rua" placeholder="Digite a rua" id="rua" type="text" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Bairro</ion-label>
+            <ion-input [(ngModel)]="bairro" placeholder="Digite o bairro" id="bairro" type="text" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Cidade</ion-label>
+            <ion-input [(ngModel)]="cidade" placeholder="Digite a cidade" id="cidade" type="text" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Status</ion-label>
+            <ion-select [(ngModel)]="status" id="status" required>
+              <ion-select-option *ngFor="let option of statusOptions" [value]="option">{{ option }}</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Motivo</ion-label>
+            <ion-textarea [(ngModel)]="motivo" placeholder="Digite o motivo do alerta" id="motivo"></ion-textarea>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Observação</ion-label>
+            <ion-textarea [(ngModel)]="observacao" placeholder="Digite uma observação" id="observacao"></ion-textarea>
+          </ion-item>
+
+          <!-- Mensagem de erro dentro de um ion-card -->
+          <ion-card *ngIf="mensagemErro" class="error-card">
+            <ion-card-content class="error-content">
+              {{ mensagemErro }}
+            </ion-card-content>
+          </ion-card>
+
+          <ion-button expand="block" class="button" (click)="salvar()">Registrar Alerta</ion-button>
+
+        </ion-card-content>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

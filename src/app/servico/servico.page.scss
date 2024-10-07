@@ -1,0 +1,79 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Centraliza o card mais para o topo */
+  padding: 16px;
+  height: 100%;
+}
+
+.rounded-card {
+  border-radius: 20px;
+  margin: 10px 15px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px; /* Aumenta o tamanho máximo para telas maiores */
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+}
+
+label {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 300px; /* Mantém o botão controlado em telas grandes */
+  padding: 12px;
+  background: linear-gradient(to right, #004080, #3399ff); /* Azul mais escuro para mais claro */
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+}
+
+@media (max-width: 768px) {
+  .rounded-card {
+    max-width: 100%; /* Em telas menores, o card ocupa 100% da largura */
+    margin: 10px;
+  }
+  .submit-btn {
+    max-width: 100%; /* O botão também ocupa 100% da largura */
+  }
+  .input-field {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}

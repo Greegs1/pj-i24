@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { ServicoPageRoutingModule } from './servico-routing.module';
 
 import { ServicoPage } from './servico.page';
+import { MenuadmPageModule } from '../menuadm/menuadm.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ServicoPageRoutingModule
+    ServicoPageRoutingModule,
+    MenuadmPageModule
   ],
   declarations: [ServicoPage]
 })

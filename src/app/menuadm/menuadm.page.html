@@ -1,0 +1,39 @@
+<ion-menu [contentId]="content_id">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu Adm.</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding custom-menu-content">
+    <ion-list>
+      <ion-item class="menu-item" (click)="go('/dashboard')">
+        <ion-icon name="settings" slot="start"></ion-icon> <!-- Ícone de Configurações preenchido -->
+        Geral
+      </ion-item>
+      <ion-item class="menu-item" (click)="go('/servico')">
+        <ion-icon name="briefcase" slot="start"></ion-icon> <!-- Ícone de Serviços preenchido -->
+         Serviços
+      </ion-item>
+      <ion-item class="menu-item" (click)="go('/admusuarios')">
+        <ion-icon name="people" slot="start"></ion-icon> <!-- Ícone de Usuários preenchido -->
+        Usuários
+      </ion-item>
+      <ion-item class="menu-item" (click)="go('/listaralertas')">
+        <ion-icon name="alert-circle-sharp" slot="start"></ion-icon> <!-- Ícone de Usuários preenchido -->
+        Alertas
+      </ion-item>
+      <ion-item class="menu-item" (click)="go('/admusuarios')">
+        <ion-icon name="people" slot="start"></ion-icon> <!-- Ícone de Usuários preenchido -->
+        -----
+      </ion-item>
+
+        <ion-item class="logout-button" (click)="go('/home')">
+          <ion-icon name="log-out-outline" slot="start"></ion-icon>
+          Logout
+        </ion-item>      
+    </ion-list>
+
+    <!-- Botão de Logout fixado na parte inferior -->
+
+  </ion-content>
+</ion-menu>

@@ -1,0 +1,96 @@
+ion-item {
+  --border-color: #ddd;
+  --placeholder-color: #fff;
+  --color: #fff;
+  --padding-start: 15px;
+  --padding-end: 15px;
+  --border-radius: 12px;
+  font-size: 1.2em;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+ion-label {
+  color: #fff;
+  font-size: 1.2em;
+}
+
+ion-input::part(native), ion-textarea::part(native), ion-datetime::part(native) {
+  color: #fff;
+}
+
+ion-input::part(native)::placeholder, ion-textarea::part(native)::placeholder {
+  color: #fff;
+}
+
+.button {
+  --background: linear-gradient(to right, #04e35a, #027224);
+  --color: white;
+  --border-radius: 12px;
+  padding: 15px 0;
+  font-size: 1.2em;
+}
+
+.header-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.rounded-card {
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+}
+
+.alerta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.alerta-container {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 15px;
+}
+
+.alerta-logo {
+  width: 180px;
+  margin-bottom: 25px;
+}
+
+.alerta-title {
+  font-size: 2em;
+  margin-bottom: 25px;
+}
+
+.error-card {
+  color: red !important;
+  font-weight: bold;
+  text-align: center;
+}
+
+.error-content {
+  color: rgb(236, 91, 91) !important;
+  font-weight: bold;
+  text-align: center;
+}
+
+.terms-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background: linear-gradient(to right, #004080, #0068cf); /* Azul mais escuro para mais claro */
+  border-radius: 15px;
+  margin-bottom: 1.25rem;
+}
+
+.clicktermos {
+  color: #ffffff;
+}

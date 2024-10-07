@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.page.scss'],
 })
 export class MenuPage implements OnInit {
-
-  constructor() { }
+  @Input("content-id") content_id:string = '';
+    constructor() { }
 
   ngOnInit() {
+  }
+  go(rota:string){
+    window.location.href = rota;
   }
 
 }
