@@ -1,0 +1,124 @@
+ion-item {
+    --border-color: #ddd;
+    --placeholder-color: #fff;
+    --color: #fff;
+    --padding-start: 15px;
+    --padding-end: 15px;
+    --border-radius: 12px;
+    font-size: 1.2em;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  ion-label {
+    color: #fff;
+    font-size: 1.2em;
+  }
+  
+  ion-input::part(native) {
+    color: #fff;
+    &::placeholder {
+      color: #fff;
+    }
+  }
+  
+  .button {
+    --background: linear-gradient(to right, #04e35a, #027224);
+    --color: white;
+    --border-radius: 12px;
+    padding: 15px 0;
+    font-size: 1.2em;
+  }
+  
+  .header-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .rounded-card {
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+  }
+  
+  .signup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+  
+  .signup-container {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 15px;
+  }
+  
+  .signup-logo {
+    width: 180px;
+    margin-bottom: 25px;
+  }
+  
+  .signup-title {
+    font-size: 2em;
+    margin-bottom: 25px;
+  }
+  
+  .terms-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: linear-gradient(to right, #004080, #0068cf); /* Azul mais escuro para mais claro */
+    border-radius: 15px;
+    margin-bottom: 1.25rem;
+  }
+  
+  ion-label {
+    font-size: 0.8rem;
+    color: #fff; /* Mudança da cor do texto para branco */
+    flex: 1;
+  }
+  
+  .terms-icon-container {
+    color: rgba(0, 255, 98, 0.877);
+    background-color: rgba(255, 255, 255, 0);
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+  }
+  
+  .icon-container {
+    color: rgba(0, 255, 98, 0.877);
+    background-color: rgba(255, 255, 255, 0);
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+  }
+  
+  .error-card {
+    color: red !important;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .error-content {
+    color: rgb(236, 91, 91) !important;
+    font-weight: bold;
+    text-align: center;
+  }
+  .clicktermos {
+    color: #ffffff;
+  }

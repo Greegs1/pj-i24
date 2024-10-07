@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RequisicaoService } from '../service/requisicao.service';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-alertas',
@@ -6,65 +8,77 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./alertas.page.scss'],
 })
 export class AlertasPage implements OnInit {
+  public usuarios: Array<any> = [];
+  public cadastroalertas: Array<any> = [];
+  public alertasFiltrados: Array<any> = [];
+  public filtroSelecionado: string = '';
+  public ordenacao: string = 'recente';
 
-  listaDeAlertas = [
-    {
-      titulo: 'Alerta 1',
-      data: '2024-09-24',
-      rua: 'Av. Brasil',
-      bairro: 'Centro',
-      cidade: 'São Paulo',
-      status: 'Novo',
-      motivo: 'Problema Elétrico',
-      observacao: 'Cabo partido na Avenida Brasil.'
-    },
-    {
-      titulo: 'Alerta 2',
-      data: '2024-09-23',
-      rua: 'Rua das Flores',
-      bairro: 'Jardim',
-      cidade: 'Rio de Janeiro',
-      status: 'Em Andamento',
-      motivo: 'Inundação',
-      observacao: 'Chuvas intensas causaram alagamento.'
-    },
-    {
-      titulo: 'Alerta 3',
-      data: '2024-09-22',
-      rua: 'Rua Verde',
-      bairro: 'Floresta',
-      cidade: 'Belo Horizonte',
-      status: 'Finalizada',
-      motivo: 'Árvore Caída',
-      observacao: 'Árvore removida com sucesso.'
-    },
-    {
-      titulo: 'Alerta 4',
-      data: '2024-09-21',
-      rua: 'Rua do Sol',
-      bairro: 'Leste',
-      cidade: 'Curitiba',
-      status: 'Novo',
-      motivo: 'Falta de Energia',
-      observacao: 'Bairro sem energia desde 15h.'
-    },
-  ];
-
-  alertasFiltrados = [...this.listaDeAlertas]; // Inicialmente, todos os alertas são mostrados
-  filtroSelecionado: string = ''; // Armazena o filtro selecionado
-
-  constructor() {}
+  constructor(
+    public requisicao_service: RequisicaoService,
+    private loadingCtrl: LoadingController
+  ) { }
 
   ngOnInit() {
-    this.filtrarAlertas(); // Filtra os alertas na inicialização
+    this.listar();
   }
 
-  // Função para filtrar alertas
+  async listar() {
+    const loading = await this.loadingCtrl.create({
+      message: 'Carregando a manivela, aguarde.'
+    });
+    loading.present();
+
+    this.requisicao_service.get({
+      controller: 'listaralertas'
+    })
+    .subscribe(
+      (_res: any) => {
+        loading.dismiss();
+        this.cadastroalertas = _res;
+        this.aplicarFiltrosEOrdenacao();
+      },
+      (error) => {
+        loading.dismiss();
+        console.error('Erro ao carregar alertas:', error);
+      }
+    );
+  }
+
+  aplicarFiltrosEOrdenacao() {
+    this.filtrarAlertas();
+    this.ordenarAlertas();
+  }
+
   filtrarAlertas() {
     if (this.filtroSelecionado) {
-      this.alertasFiltrados = this.listaDeAlertas.filter(alerta => alerta.status === this.filtroSelecionado);
+      this.alertasFiltrados = this.cadastroalertas.filter(
+        alerta => alerta.status === this.filtroSelecionado
+      );
     } else {
-      this.alertasFiltrados = [...this.listaDeAlertas]; // Se nenhum filtro, mostra todos
+      this.alertasFiltrados = [...this.cadastroalertas];
     }
+  }
+
+  ordenarAlertas() {
+    this.alertasFiltrados.sort((a, b) => {
+      if (this.ordenacao === 'recente') {
+        return new Date(b.data).getTime() - new Date(a.data).getTime();
+      } else {
+        return new Date(a.data).getTime() - new Date(b.data).getTime();
+      }
+    });
+  }
+
+  // Método para ser chamado quando o filtro é alterado
+  onFiltroChange(event: any) {
+    this.filtroSelecionado = event.detail.value;
+    this.aplicarFiltrosEOrdenacao();
+  }
+
+  // Novo método para alternar entre ordenação recente e antiga
+  toggleOrdenacao() {
+    this.ordenacao = this.ordenacao === 'recente' ? 'antigo' : 'recente';
+    this.ordenarAlertas();
   }
 }

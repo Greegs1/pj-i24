@@ -4,6 +4,11 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleOrdenacao()">
+        <ion-icon [name]="ordenacao === 'recente' ? 'arrow-down' : 'arrow-up'"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -20,7 +25,7 @@
   <ion-item>
     <ion-icon slot="start" name="filter"></ion-icon>
     <ion-label>Filtrar por Status:</ion-label>
-    <ion-select [(ngModel)]="filtroSelecionado" (ionChange)="filtrarAlertas()">
+    <ion-select [(ngModel)]="filtroSelecionado" (ionChange)="aplicarFiltrosEOrdenacao()">
       <ion-select-option value="">Todos</ion-select-option>
       <ion-select-option value="Novo">Novo</ion-select-option>
       <ion-select-option value="Em Andamento">Em Andamento</ion-select-option>
@@ -31,19 +36,21 @@
   <div class="alertas-lista">
     <ion-list>
       <ion-list-header>
-        <ion-label>Alertas Recentes</ion-label>
+        <ion-label>
+          Alertas {{ ordenacao === 'recente' ? 'Mais Recentes' : 'Mais Antigos' }}
+        </ion-label>
       </ion-list-header>
 
       <ion-item *ngFor="let alerta of alertasFiltrados">
         <ion-label>
           <h2>{{ alerta.titulo }}</h2>
-          <p><b>Data:</b> {{ alerta.data }}</p>
-          <p><b>Rua:</b> {{ alerta.rua }}, Bairro: {{ alerta.bairro }}, Cidade: {{ alerta.cidade }}</p>
+          <p><b>Data:</b> {{ alerta.data | date:'dd/MM/yyyy HH:mm' }}</p>
+          <p><b>Rua:</b> {{ alerta.rua }}, <b>Bairro:</b> {{ alerta.bairro }}, <b>Cidade:</b> {{ alerta.cidade }}</p>
           <p><b>Status:</b> {{ alerta.status }}</p>
           <p><b>Motivo:</b> {{ alerta.motivo }}</p>
-          <p><b>Observação:</b>{{ alerta.observacao }}</p>
+          <p><b>Observação:</b> {{ alerta.observacao }}</p>
         </ion-label>
-        <ion-badge slot="end" [color]="alerta.status === 'Novo' ? 'danger' : alerta.status === 'Finalizada' ? 'success' : 'warning'">
+        <ion-badge slot="end" [color]="alerta.status === 'Novo' ? 'success' : alerta.status === 'Finalizada' ? 'danger' : 'warning'">
           {{ alerta.status }}
         </ion-badge>
       </ion-item>

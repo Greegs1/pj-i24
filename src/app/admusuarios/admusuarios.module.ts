@@ -1,14 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
-
 import { AdmusuariosPageRoutingModule } from './admusuarios-routing.module';
-
 import { AdmusuariosPage } from './admusuarios.page';
-import { MenuPageModule } from '../menu/menu.module';
 import { MenuadmPageModule } from '../menuadm/menuadm.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
@@ -16,9 +13,9 @@ import { MenuadmPageModule } from '../menuadm/menuadm.module';
     FormsModule,
     IonicModule,
     AdmusuariosPageRoutingModule,
-    MenuadmPageModule
+    MenuadmPageModule,
+    RouterModule,
   ],
-  declarations: [AdmusuariosPage 
-  ]
+  declarations: [AdmusuariosPage]
 })
 export class AdmusuariosPageModule {}

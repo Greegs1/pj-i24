@@ -10,13 +10,15 @@
 
           <!-- Formulário de cadastro de alerta -->
           <ion-item>
-            <ion-label position="floating">Título</ion-label>
-            <ion-input [(ngModel)]="titulo" placeholder="Digite o título do alerta" id="titulo" type="text" required></ion-input>
+            <ion-label position="floating">Tipo</ion-label>
+            <ion-select [(ngModel)]="titulo" placeholder="Selecione o tipo de interrupção" id="titulo" required>
+              <ion-select-option *ngFor="let option of tituloOptions" [value]="option">{{ option }}</ion-select-option>
+            </ion-select>
           </ion-item>
 
           <ion-item>
             <ion-label position="floating">Data</ion-label>
-            <ion-datetime [(ngModel)]="data" display-format="YYYY-MM-DD HH:mm:ss"></ion-datetime>
+            <ion-datetime [(ngModel)]="data" display-format="YYYY-MM-DD HH:mm:ss" [min]="minDate"></ion-datetime>
           </ion-item>
 
           <ion-item>

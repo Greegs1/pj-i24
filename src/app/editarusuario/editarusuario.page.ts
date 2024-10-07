@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { RequisicaoService } from '../service/requisicao.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router'; // Changed from 'express'
+
+
 
 @Component({
-  selector: 'app-cadastro',
-  templateUrl: './cadastro.page.html',
-  styleUrls: ['./cadastro.page.scss'],
+  selector: 'app-editarusuario',
+  templateUrl: './editarusuario.page.html',
+  styleUrls: ['./editarusuario.page.scss'],
 })
-export class CadastroPage implements OnInit {
+export class EditarusuarioPage implements OnInit {
   public id: number = 0;
   public senha: string = '';
   public confirmarSenha: string = '';
@@ -113,7 +115,7 @@ export class CadastroPage implements OnInit {
     fd.append('cpfj', this.cpfj);
 
     this.rs.post(fd).subscribe(() => {
-      location.href = '/login';
+      location.href = '/admusuario';
     });
   }
 }

@@ -1,0 +1,81 @@
+<ion-content [fullscreen]="true">
+  <div class="signup-container">
+    <ion-card class="rounded-card">
+      <div class="signup-content">
+        <ion-card-header class="header-center">
+          <img src="https://i.imgur.com/t4I9hO1.png" class="signup-logo" />
+          <ion-card-title class="signup-title">Editar conta</ion-card-title>
+        </ion-card-header>
+        
+        <ion-card-content>
+          <!-- Formulário de cadastro -->
+          <ion-item>
+            <ion-label position="floating">Nome</ion-label>
+            <ion-input [(ngModel)]="nome" placeholder="Digite seu nome completo" id="nome" type="text" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">CPF</ion-label>
+            <ion-input [(ngModel)]="cpfj" placeholder="Digite seu CPF" id="cpfj" type="text" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">E-mail</ion-label>
+            <ion-input [(ngModel)]="email" placeholder="Digite seu e-mail" id="email" type="email" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Telefone</ion-label>
+            <ion-input [(ngModel)]="telefone" placeholder="Digite seu telefone" id="telefone" type="tel" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">CEP</ion-label>
+            <ion-input [(ngModel)]="cep" placeholder="Digite seu CEP" id="cep" type="text" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">UF</ion-label>
+            <ion-select [(ngModel)]="estado" id="estado" required>
+              <ion-select-option *ngFor="let estado of estados" [value]="estado">{{ estado }}</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Cidade</ion-label>
+            <ion-select [(ngModel)]="cidade" id="cidade" required>
+              <ion-select-option *ngFor="let cidade of cidades" [value]="cidade">{{ cidade }}</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Bairro</ion-label>
+            <ion-input [(ngModel)]="bairro" placeholder="Digite seu bairro" id="bairro" type="text" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Rua</ion-label>
+            <ion-input [(ngModel)]="rua" placeholder="Digite sua rua" id="rua" type="text" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Número</ion-label>
+            <ion-input [(ngModel)]="numero" placeholder="Digite o número" id="numero" type="number" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Senha</ion-label>
+            <ion-input [(ngModel)]="senha" placeholder="Digite sua senha" id="senha" type="password" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Confirmar Senha</ion-label>
+            <ion-input [(ngModel)]="confirmarSenha" placeholder="Confirme sua senha" id="confirmPassword" type="password" required></ion-input>
+          </ion-item>
+
+          <ion-button expand="block" class="button" (click)="salvar()">Salvar alterações</ion-button>
+        </ion-card-content>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

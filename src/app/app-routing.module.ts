@@ -5,7 +5,7 @@ const routes: Routes = [
   // outras rotas...
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
   {
     path: '',
@@ -14,91 +14,99 @@ const routes: Routes = [
   },
   {
     path: 'etapa1',
-    loadChildren: () => import('./apresentacao/etapa1/etapa1.module').then( m => m.Etapa1PageModule)
+    loadChildren: () => import('./apresentacao/etapa1/etapa1.module').then(m => m.Etapa1PageModule)
   },
   {
     path: 'etapa2',
-    loadChildren: () => import('./apresentacao/etapa2/etapa2.module').then( m => m.Etapa2PageModule)
+    loadChildren: () => import('./apresentacao/etapa2/etapa2.module').then(m => m.Etapa2PageModule)
   },
   {
     path: 'etapa3',
-    loadChildren: () => import('./apresentacao/etapa3/etapa3.module').then( m => m.Etapa3PageModule)
+    loadChildren: () => import('./apresentacao/etapa3/etapa3.module').then(m => m.Etapa3PageModule)
   },
   {
     path: 'apresentacao',
-    loadChildren: () => import('./apresentacao/apresentacao.module').then( m => m.ApresentacaoPageModule)
+    loadChildren: () => import('./apresentacao/apresentacao.module').then(m => m.ApresentacaoPageModule)
   },
   {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
   },
   {
     path: 'cadastro',
-    loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
+    loadChildren: () => import('./cadastro/cadastro.module').then(m => m.CadastroPageModule)
   },
   {
     path: 'cadastro/:id',
-    loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
+    loadChildren: () => import('./cadastro/cadastro.module').then(m => m.CadastroPageModule)
   },
   {
     path: 'esqueceu',
-    loadChildren: () => import('./esqueceu/esqueceu.module').then( m => m.EsqueceuPageModule)
+    loadChildren: () => import('./esqueceu/esqueceu.module').then(m => m.EsqueceuPageModule)
   },
   {
     path: 'admusuarios',
-    loadChildren: () => import('./admusuarios/admusuarios.module').then( m => m.AdmusuariosPageModule)
+    loadChildren: () => import('./admusuarios/admusuarios.module').then(m => m.AdmusuariosPageModule)
   },
   {
     path: 'servico',
-    loadChildren: () => import('./servico/servico.module').then( m => m.ServicoPageModule)
+    loadChildren: () => import('./servico/servico.module').then(m => m.ServicoPageModule)
   },
   {
     path: 'admnotificacao',
-    loadChildren: () => import('./admnotificacao/admnotificacao.module').then( m => m.AdmnotificacaoPageModule)
+    loadChildren: () => import('./admnotificacao/admnotificacao.module').then(m => m.AdmnotificacaoPageModule)
   },
   {
     path: 'configuracoes',
-    loadChildren: () => import('./configuracoes/configuracoes.module').then( m => m.ConfiguracoesPageModule)
+    loadChildren: () => import('./configuracoes/configuracoes.module').then(m => m.ConfiguracoesPageModule)
   },
   {
     path: 'menu',
-    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+    loadChildren: () => import('./menu/menu.module').then(m => m.MenuPageModule)
   },
   {
     path: 'grafico-exemplo',
-    loadChildren: () => import('./grafico-exemplo/grafico-exemplo.module').then( m => m.GraficoExemploPageModule)
+    loadChildren: () => import('./grafico-exemplo/grafico-exemplo.module').then(m => m.GraficoExemploPageModule)
   },
   {
     path: 'card',
-    loadChildren: () => import('./card/card.module').then( m => m.CardPageModule)
+    loadChildren: () => import('./card/card.module').then(m => m.CardPageModule)
   },
   {
     path: 'horarios',
-    loadChildren: () => import('./horarios/horarios.module').then( m => m.HorariosPageModule)
+    loadChildren: () => import('./horarios/horarios.module').then(m => m.HorariosPageModule)
   },
   {
     path: 'dashboard',
-    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
+    loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardPageModule)
   },
   {
     path: 'menuadm',
-    loadChildren: () => import('./menuadm/menuadm.module').then( m => m.MenuadmPageModule)
+    loadChildren: () => import('./menuadm/menuadm.module').then(m => m.MenuadmPageModule)
   },
   {
     path: 'alertas',
-    loadChildren: () => import('./alertas/alertas.module').then( m => m.AlertasPageModule)
+    loadChildren: () => import('./alertas/alertas.module').then(m => m.AlertasPageModule)
   },
   {
     path: 'admalertas',
-    loadChildren: () => import('./admalertas/admalertas.module').then( m => m.AdmalertasPageModule)
+    loadChildren: () => import('./admalertas/admalertas.module').then(m => m.AdmalertasPageModule)
+  },
+  {
+    path: 'admalertas/:id',
+    loadChildren: () => import('./admalertas/admalertas.module').then(m => m.AdmalertasPageModule)
   },
   {
     path: 'termos',
-    loadChildren: () => import('./termos/termos.module').then( m => m.TermosPageModule)
+    loadChildren: () => import('./termos/termos.module').then(m => m.TermosPageModule)
   },
   {
     path: 'listaralertas',
-    loadChildren: () => import('./listaralertas/listaralertas.module').then( m => m.ListaralertasPageModule)
+    loadChildren: () => import('./listaralertas/listaralertas.module').then(m => m.ListaralertasPageModule)
+  },
+  {
+    path: 'editarusuario',
+    loadChildren: () => import('./editarusuario/editarusuario.module').then(m => m.EditarusuarioPageModule)
   },
 ];
 

@@ -1,0 +1,51 @@
+.form-container {
+    padding: 16px;
+  }
+  
+  .submit-btn {
+    margin-bottom: 16px;
+    --padding-end: 16px;
+    --padding-start: 16px;
+  }
+  
+  .rounded-card {
+    border-radius: 16px;
+    margin: 0;
+  }
+  
+  .form-content {
+    padding: 16px;
+  }
+  
+  .alert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+  }
+  
+  .alert-card {
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0;
+  }
+  
+  .alert-card ion-card-content {
+    padding: 16px;
+  }
+  
+  .alert-card h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  
+  .alert-card p {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }

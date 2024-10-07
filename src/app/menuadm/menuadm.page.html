@@ -12,13 +12,20 @@
       </ion-item>
       <ion-item class="menu-item" (click)="go('/servico')">
         <ion-icon name="briefcase" slot="start"></ion-icon> <!-- Ícone de Serviços preenchido -->
-        Cadastrar Serviços
+         Serviços
       </ion-item>
       <ion-item class="menu-item" (click)="go('/admusuarios')">
         <ion-icon name="people" slot="start"></ion-icon> <!-- Ícone de Usuários preenchido -->
-        Lista de Usuários
+        Usuários
       </ion-item>
-
+      <ion-item class="menu-item" (click)="go('/listaralertas')">
+        <ion-icon name="alert-circle-sharp" slot="start"></ion-icon> <!-- Ícone de Usuários preenchido -->
+        Alertas
+      </ion-item>
+      <ion-item class="menu-item" (click)="go('/admusuarios')">
+        <ion-icon name="people" slot="start"></ion-icon> <!-- Ícone de Usuários preenchido -->
+        -----
+      </ion-item>
 
         <ion-item class="logout-button" (click)="go('/home')">
           <ion-icon name="log-out-outline" slot="start"></ion-icon>
