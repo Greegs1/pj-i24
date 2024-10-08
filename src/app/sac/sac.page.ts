@@ -11,5 +11,7 @@ export class SacPage implements OnInit {
 
   ngOnInit() {
   }
-
+  go(rota:string){
+    window.location.href = rota;
+  }
 }

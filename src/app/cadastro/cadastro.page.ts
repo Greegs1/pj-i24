@@ -116,4 +116,7 @@ export class CadastroPage implements OnInit {
       location.href = '/login';
     });
   }
+  go(rota:string){
+    window.location.href = rota;
+  }
 }

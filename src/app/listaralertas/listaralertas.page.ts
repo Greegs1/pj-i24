@@ -52,4 +52,7 @@ export class ListaralertasPage implements OnInit {
       }
     );
   }
+  go(rota:string){
+    window.location.href = rota;
+  }
 }

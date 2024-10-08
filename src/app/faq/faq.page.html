@@ -32,7 +32,7 @@
     </ion-card-header>
     <ion-card-content>
       <p>Basta abrir o aplicativo e clicar em "Relatar Interrupção". Se o problema não estiver listado, ligue para o nosso suporte técnico.</p>
-      <ion-button fill="clear" routerLink="/sac" expand="full">
+      <ion-button fill="clear" (click)="go('/sac')" expand="full">
         Relatar Interrupção
       </ion-button>
     </ion-card-content>
@@ -53,7 +53,7 @@
     </ion-card-header>
     <ion-card-content>
       <p>Certifique-se de ativar as notificações do aplicativo em seu dispositivo. Vá para as configurações de notificação e ative as atualizações de interrupção de energia.</p>
-      <ion-button fill="clear" routerLink="/configuracoes" expand="full">
+      <ion-button fill="clear" (click)="go('/configuracoes')" expand="full">
         Configurar Notificações
       </ion-button>
     </ion-card-content>
@@ -65,7 +65,7 @@
     </ion-card-header>
     <ion-card-content>
       <p>As interrupções programadas são notificadas com antecedência através do aplicativo. Verifique a seção de alertas para ver se sua área será afetada.</p>
-      <ion-button fill="clear" routerLink="/alertas" expand="full">
+      <ion-button fill="clear" (click)="go('/alertas')" expand="full">
         Verificar Interrupções Programadas
       </ion-button>
     </ion-card-content>

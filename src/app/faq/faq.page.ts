@@ -11,5 +11,7 @@ export class FaqPage implements OnInit {
 
   ngOnInit() {
   }
-
+  go(rota:string){
+    window.location.href = rota;
+  }
 }
