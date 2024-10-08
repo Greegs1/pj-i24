@@ -118,4 +118,7 @@ export class AdmAlertasPage implements OnInit {
       location.href = '/listaralertas';
     });
   }
+  go(rota:string){
+    window.location.href = rota;
+  }
 }

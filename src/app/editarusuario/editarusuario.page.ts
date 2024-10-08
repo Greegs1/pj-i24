@@ -118,4 +118,7 @@ export class EditarusuarioPage implements OnInit {
       location.href = '/admusuario';
     });
   }
+  go(rota:string){
+    window.location.href = rota;
+  }
 }

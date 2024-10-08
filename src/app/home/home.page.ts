@@ -11,6 +11,7 @@ export class HomePage {
 
   constructor(
     public requisicao_service:RequisicaoService,
+    
   ) { }
 
   public usuarios:Array<any> = [];
@@ -27,5 +28,8 @@ export class HomePage {
     this.requisicao_service.get({
       controller:'listarusuario'
     })
+  }
+  go(rota:string){
+    window.location.href = rota;
   }
 }

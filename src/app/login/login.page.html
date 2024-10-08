@@ -17,12 +17,12 @@
               <ion-input type="password" id="password" placeholder="••••••••" required></ion-input>
             </div>
             <div class="forgot-password">
-              <a href="#" routerLink="/esqueceu">Esqueceu a senha?</a>
+              <a href="#" (click)="go('/esqueceu')">Esqueceu a senha?</a>
             </div>
-            <ion-button expand="block" class="login-button" routerLink="/home">Entrar</ion-button>
+            <ion-button expand="block" class="login-button" (click)="go('/home')">Entrar</ion-button>
           </form>
           <div class="signup-link">
-            <p>Ainda não tem conta? <a href="#" routerLink="/cadastro"><b>Crie uma!</b></a></p>
+            <p>Ainda não tem conta? <a href="#" (click)="go('/cadastro')"><b>Crie uma!</b></a></p>
           </div>
         </ion-card-content>
       </div>

@@ -81,4 +81,7 @@ export class AlertasPage implements OnInit {
     this.ordenacao = this.ordenacao === 'recente' ? 'antigo' : 'recente';
     this.ordenarAlertas();
   }
+  go(rota:string){
+    window.location.href = rota;
+  }
 }

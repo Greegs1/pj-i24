@@ -31,7 +31,7 @@
   </ion-card>
 
   <!-- Card ALERTAS -->
-  <ion-card button color="danger" class="rounded-card" routerLink="/alertas">
+  <ion-card button color="danger" class="rounded-card" (click)="go('/alertas')">
     <div class="card-content">
       <div class="icon-container">
         <ion-icon name="alert-circle-outline"></ion-icon>
@@ -48,7 +48,7 @@
   </ion-card>
 
   <!-- Card HORÁRIOS -->
-  <ion-card button color="primary" class="rounded-card" routerLink="/horarios">
+  <ion-card button color="primary" class="rounded-card" (click)="go('/horarios')">
     <div class="card-content">
       <div class="icon-container">
         <ion-icon name="time-outline"></ion-icon>
@@ -65,7 +65,7 @@
   </ion-card>
 
   <!-- Card AJUSTES -->
-  <ion-card button color="tertiary" class="rounded-card" routerLink="/configuracoes">
+  <ion-card button color="tertiary" class="rounded-card" (click)="go('/configuracoes')">
     <div class="card-content">
       <div class="icon-container">
         <ion-icon name="settings-outline"></ion-icon>
@@ -82,7 +82,7 @@
   </ion-card>
 
   <!-- Card CENTRAL DE AJUDA -->
-  <ion-card button color="medium" class="rounded-card" routerLink="/sac">
+  <ion-card button color="medium" class="rounded-card" (click)="go('/sac')">
     <div class="card-content">
       <div class="icon-container">
         <ion-icon name="help-circle-outline"></ion-icon>

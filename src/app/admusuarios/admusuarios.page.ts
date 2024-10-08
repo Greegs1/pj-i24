@@ -52,4 +52,7 @@ export class AdmusuariosPage implements OnInit {
       }
     );
   }
+  go(rota:string){
+    window.location.href = rota;
+  }
 }
