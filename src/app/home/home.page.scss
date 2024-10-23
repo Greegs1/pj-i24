@@ -17,6 +17,10 @@
   &.ion-color-medium {
     background: linear-gradient(to right, #666666, #b3b3b3); /* Cinza mais escuro para mais claro */
   }
+    &.ion-color-success {
+    background: linear-gradient(to right, #0a7a13, #00dd55);
+    color: white; /* Cinza mais escuro para mais claro */
+  }
 }
 
 .card-content {

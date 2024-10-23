@@ -39,7 +39,7 @@ export class AdmusuariosPage implements OnInit {
 
   async listar() {
     const loading = await this.loadingCtrl.create({
-      message: 'Carregando a manivela, aguarde.'
+      message: 'Carregando, aguarde.'
     });
     loading.present();
 

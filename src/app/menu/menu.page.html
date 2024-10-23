@@ -1,16 +1,11 @@
 <ion-menu [contentId]="content_id">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
   <ion-content class="ion-padding custom-menu-content">
     <ion-list>
       <ion-item class="menu-item" (click)="go('/home')">
         <ion-icon name="home" slot="start"></ion-icon>
         Home
       </ion-item>
-      <ion-item class="menu-item" (click)="go('/alertas')">
+      <ion-item class="menu-item menuteste" (click)="go('/alertas')">
         <ion-icon name="alert-circle" slot="start"></ion-icon>
         Alertas
       </ion-item>
@@ -26,19 +21,21 @@
         <ion-icon name="help-sharp" slot="start"></ion-icon>
         Ajuda
       </ion-item>
+      <ion-item class="menu-item" (click)="go('/sobrenos')">
+        <ion-icon name="flash" slot="start"></ion-icon>
+        Sobre Nós
+      </ion-item>
+      
 
 
     </ion-list>
   </ion-content>
   <div class="login-admin-container">
     <ion-item class="login-admin-item" (click)="go('/login')">
-      <ion-icon name="log-in" slot="start"></ion-icon>
-      Login 
+      <ion-icon name="log-out" slot="start"></ion-icon>
+      Login | Logout
     </ion-item>
-    <ion-item class="login-admin-item" (click)="go('/dashboard')">
-      <ion-icon name="code-slash-outline" slot="start"></ion-icon>
-             Modo Admin
-    </ion-item>
+
     <ion-item class="login-admin-item" (click)="go('/termos')">
       <ion-icon name="document" slot="start"></ion-icon>
       Termos de uso

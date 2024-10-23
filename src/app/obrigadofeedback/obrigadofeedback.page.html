@@ -1,0 +1,52 @@
+<ion-header [translucent]="true"> 
+  <ion-toolbar>
+    <ion-title>Obrigado!</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<app-menu content-id="obrigadofeedback-content"></app-menu>
+
+<ion-content [fullscreen]="true" id="obrigadofeedback-content">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Obrigado pelo seu Feedback!</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Card de Agradecimento -->
+  <ion-card class="thank-you-card rounded-card">
+    <div class="thank-you-content">
+      <div class="thank-you-text-container">
+        <ion-card-header>
+          <ion-card-title>Seu Feedback é Importante!</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Agradecemos por dedicar seu tempo para nos ajudar a melhorar. Suas sugestões são muito valiosas para nós!</p>
+        </ion-card-content>
+      </div>
+      <div class="thank-you-icon-container">
+        <ion-icon name="thumbs-up"></ion-icon>
+      </div>
+    </div>
+  </ion-card>
+
+  <!-- Card Voltar para a Home -->
+  <ion-card button color="primary" class="rounded-card" (click)="go('/home')">
+    <div class="card-content">
+      <div class="icon-container">
+        <ion-icon name="home-outline"></ion-icon>
+      </div>
+      <div class="text-container">
+        <ion-card-header>
+          <ion-card-title>Voltar para Home</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Retorne à página inicial.</p>
+        </ion-card-content>
+      </div>
+    </div>
+  </ion-card>
+</ion-content>

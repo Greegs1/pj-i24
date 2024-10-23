@@ -1,4 +1,16 @@
 <ion-content [fullscreen]="true">
+  <!-- Back button with icon and text linking to home -->
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button (click)="go('/login')">
+          <ion-icon name="arrow-back-circle"></ion-icon>
+          <ion-label>ㅤVoltar para login</ion-label>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
   <div class="signup-container">
     <ion-card class="rounded-card">
       <div class="signup-content">
@@ -82,7 +94,7 @@
                     <ion-icon name="checkmark"></ion-icon>
                   </div>
                 </div>
-                <p>Ao finalizar o cadastro você está ciente que concorda com todos os <u routerLink="/termos" class="clicktermos"><b>termos e condições do aplicativo</b></u>.</p>
+                <p>Ao finalizar o cadastro você está ciente que concorda com todos os <u (click)="go('/termos')" class="clicktermos"><b>termos e condições do aplicativo</b></u>.</p>
               </div>
             </ion-label>
           </div>
@@ -94,7 +106,7 @@
             </ion-card-content>
           </ion-card>
 
-          <ion-button expand="block" class="button" (click)="salvar()">Criar conta</ion-button>
+          <ion-button expand="block" class="button1" (click)="salvar()">Criar conta</ion-button>
 
         </ion-card-content>
       </div>

@@ -22,7 +22,7 @@ ion-input::part(native) {
   }
 }
 
-.button {
+.button1 {
   --background: linear-gradient(to right, #04e35a, #027224);
   --color: white;
   --border-radius: 12px;
@@ -79,7 +79,6 @@ ion-input::part(native) {
 }
 
 ion-label {
-  font-size: 0.8rem;
   color: #fff; /* Mudança da cor do texto para branco */
   flex: 1;
 }

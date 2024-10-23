@@ -1,0 +1,126 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- Back button with icon and text -->
+      <ion-button (click)="go('/home')">
+        <ion-icon name="arrow-back-circle"></ion-icon>
+        <ion-label>ㅤVoltar para home</ion-label>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<app-menu content-id="feedback-content"></app-menu>
+
+<ion-content [fullscreen]="true">
+  <div class="feedback-container">
+    <ion-card class="rounded-card">
+      
+      <!-- Header Section -->
+      <ion-card-header class="header-center">
+        <ion-card-title class="feedback-title">
+          Enviar Feedback & Sugestões
+        </ion-card-title>
+      </ion-card-header>
+
+      <!-- Form Content -->
+      <ion-card-content>
+
+        <!-- Name Input -->
+        <ion-item>
+          <ion-label position="floating">Nome</ion-label>
+          <ion-input 
+            [(ngModel)]="nome" 
+            name="nome"
+            placeholder="Digite seu nome" 
+            type="text" 
+            required
+          ></ion-input>
+        </ion-item>
+
+        <!-- Email Input -->
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input 
+            [(ngModel)]="email" 
+            name="email"
+            placeholder="Digite seu email" 
+            type="email" 
+            required
+          ></ion-input>
+        </ion-item>
+
+        <!-- Feedback Type Select -->
+        <ion-item>
+          <ion-label position="floating">Tipo de Feedback</ion-label>
+          <ion-select 
+            [(ngModel)]="tipoFeedback" 
+            name="tipoFeedback"
+            required
+          >
+            <ion-select-option 
+              *ngFor="let option of feedbackOptions" 
+              [value]="option"
+            >
+              {{ option }}
+            </ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <!-- Message Textarea -->
+        <ion-item>
+          <ion-label position="floating">Mensagem</ion-label>
+          <ion-textarea 
+            [(ngModel)]="mensagem" 
+            name="mensagem"
+            placeholder="Digite sua sugestão ou comentário" 
+            required
+          ></ion-textarea>
+        </ion-item>
+
+        <!-- Rating Stars -->
+        <ion-item lines="none">
+          <ion-label>Deixe sua avaliação!</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <div class="stars-container">
+            <ion-icon
+              *ngFor="let star of stars; let i = index"
+              [name]="star"
+              (click)="setRating(i + 1)"
+              class="star-icon"
+            ></ion-icon>
+          </div>
+        </ion-item>
+
+        <!-- Error Message Display -->
+        <ion-card *ngIf="mensagemErro" class="error-card">
+          <ion-card-content class="error-content">
+            {{ mensagemErro }}
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Action Buttons -->
+        <div class="button-container">
+          <ion-button 
+            expand="block" 
+            (click)="enviarFeedback()"
+            class="submit-button"
+          >
+            Enviar Feedback
+          </ion-button>
+          <ion-button 
+            expand="block" 
+            color="light" 
+            (click)="limparFormulario()"
+            class="clear-button"
+          >
+            Limpar
+          </ion-button>
+        </div>
+        
+      </ion-card-content>
+      
+    </ion-card>
+  </div>
+</ion-content>

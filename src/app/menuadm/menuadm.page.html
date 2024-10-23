@@ -1,31 +1,49 @@
 <ion-menu [contentId]="content_id">
+  <!-- Menu Header -->
   <ion-header>
     <ion-toolbar>
-      <ion-title>Menu Adm.</ion-title>
+      <ion-title>Modo Admin</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <!-- Menu Content -->
   <ion-content class="ion-padding custom-menu-content">
     <ion-list>
+      <!-- General Settings Menu Item -->
       <ion-item class="menu-item" (click)="go('/dashboard')">
         <ion-icon name="settings" slot="start"></ion-icon> <!-- Ícone de Configurações preenchido -->
         Geral
       </ion-item>
+
+      <!-- Users Management Menu Item -->
       <ion-item class="menu-item" (click)="go('/admusuarios')">
         <ion-icon name="people" slot="start"></ion-icon> <!-- Ícone de Usuários preenchido -->
         Usuários
       </ion-item>
+
+      <!-- Alerts Menu Item -->
       <ion-item class="menu-item" (click)="go('/listaralertas')">
-        <ion-icon name="alert-circle-sharp" slot="start"></ion-icon> <!-- Ícone de Usuários preenchido -->
+        <ion-icon name="alert-circle-sharp" slot="start"></ion-icon> <!-- Ícone de Alertas preenchido -->
         Alertas
       </ion-item>
 
-        <ion-item class="logout-button" (click)="go('/home')">
-          <ion-icon name="log-out-outline" slot="start"></ion-icon>
-          Logout
-        </ion-item>      
-    </ion-list>
-
-    <!-- Botão de Logout fixado na parte inferior -->
-
+      <ion-item class="menu-item" (click)="go('/admfeedback')">
+    <ion-icon name="star-half" slot="start"></ion-icon> <!-- Ícone de Alertas preenchido -->
+    Listar Feedback's
+  </ion-item>
+      </ion-list>
   </ion-content>
+      <!-- Feedback Menu Item -->
+
+
+
+
+  <!-- Login/Admin Container at the Bottom -->
+  <div class="login-admin-container">
+    <!-- Logout Button -->
+    <ion-item class="login-admin-item logout-button" (click)="go('/login')">
+      <ion-icon name="log-out-outline" slot="start"></ion-icon> <!-- Ícone de Logout -->
+      Logout
+    </ion-item>
+  </div>
 </ion-menu>
