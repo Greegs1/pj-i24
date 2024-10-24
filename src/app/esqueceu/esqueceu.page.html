@@ -1,4 +1,16 @@
 <ion-content [fullscreen]="true">
+  <!-- Back button with icon and text linking to home -->
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button (click)="go('/login')">
+          <ion-icon name="arrow-back-circle"></ion-icon>
+          <ion-label>ㅤVoltar para login</ion-label>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
   <div class="reset-password-container">
     <ion-card class="rounded-ios-card">
       <div class="reset-password-content">

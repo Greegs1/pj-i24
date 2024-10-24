@@ -12,7 +12,10 @@
   width: 90%; /* Aumenta a largura do card */
   max-width: 500px; /* Define uma largura máxima */
 }
-
+ion-label {
+  color: #fff;
+  font-size: 1.2em;
+}
 .reset-password-content {
   display: flex;
   flex-direction: column;

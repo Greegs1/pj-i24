@@ -59,6 +59,10 @@ ion-input {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+ion-label {
+  color: #fff;
+  font-size: 1.2em;
+}
 .forgot-password {
   text-align: right;
   width: 100%;
@@ -89,3 +93,15 @@ ion-input {
   color: #3498db;
   text-decoration: none;
 }
+.admin-button-container {
+  position: absolute;
+  bottom: 20px;  /* Distância do fundo da tela */
+  left: 50%;     /* Centraliza horizontalmente */
+  transform: translateX(-50%);
+  font-size: 12px;        /* Tamanho pequeno do botão */
+  padding: 6px 12px;      /* Ajuste de padding para deixar o botão pequeno */
+  border-radius: 20px;    /* Canto arredondado */
+  background: #ffffff;    /* Cor de fundo do botão */
+  color: rgba(255, 255, 255, 0.116);           /* Cor do texto */
+}
+

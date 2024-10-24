@@ -44,8 +44,9 @@ export class CadastroPage implements OnInit {
     private router: Router
   ) {
     this.activated_router.params.subscribe((params: any) => {
-      this.id = params.id;
-      if (this.id != 0 && this.id != null) {
+      
+      if (this.id !== 0 && this.id !== null && this.id !== undefined) {
+        this.id = params.id;
         this.rs
           .get({
             controller: 'usuario-get',

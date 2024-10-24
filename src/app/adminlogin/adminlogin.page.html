@@ -1,0 +1,38 @@
+<ion-content [fullscreen]="true">
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button (click)="go('/login')">
+          <ion-icon name="arrow-back-circle"></ion-icon>
+          <ion-label>ㅤVoltar</ion-label>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="login-container">
+    <ion-card class="rounded-ios-card">
+      <div class="login-content">
+        <ion-card-header class="header-center">
+          <img src="https://i.imgur.com/YIlzaIP.png" class="login-logo" />
+          <ion-card-title class="login-title">Entre na sua conta admin</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <form (ngSubmit)="autenticar()">
+            <div class="input-group">
+              <label class="input-label" for="cpfj">Credencial</label>
+              <ion-input [(ngModel)]="credencial" name="credencial" placeholder="Insira Sua Credencial" required></ion-input>
+            </div>
+
+            <div class="input-group">
+              <label class="input-label" for="password">Senha</label>
+              <ion-input [(ngModel)]="senha" name="senha" type="password" placeholder="***********" required></ion-input>
+            </div>
+
+            <ion-button expand="block" class="login-button" type="submit">Entrar</ion-button>
+          </form>
+        </ion-card-content>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

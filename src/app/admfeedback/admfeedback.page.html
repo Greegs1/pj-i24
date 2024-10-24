@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Listar Feedback</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<app-menuadm content-id="home-content"></app-menuadm>
+
+<ion-content [fullscreen]="true" id="home-content">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Lista de Feedbacks</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="form-container">
+    <ion-card class="rounded-card">
+      <div class="form-content">
+        <!-- Listagem de feedbacks -->
+        <div class="feedback-list-container">
+          <div class="feedback-grid">
+            <ion-card *ngFor="let feedback of feedbacks" class="feedback-card">
+              <ion-card-content>
+                <h2>{{ feedback.nome }}</h2>
+                <p><strong>Email:</strong> {{ feedback.email }}</p>
+                <p><strong>Tipo:</strong> {{ feedback.tipo_feedback }}</p>
+                <p><strong>Avaliação:</strong> {{ feedback.avaliacao }} estrelas</p>
+                <p><strong>Mensagem:</strong> {{ feedback.mensagem }}</p>
+                
+                <div class="button-container">
+                  <ion-button fill="clear" color="danger" (click)="excluir(feedback.id)">
+                    <ion-icon slot="start" name="trash"></ion-icon>
+                    Excluir
+                  </ion-button>
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </div>
+        </div>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

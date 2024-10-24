@@ -3,7 +3,7 @@
     <ion-title>Home</ion-title>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
-      </ion-buttons>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 <app-menu content-id="home-content"></app-menu>
@@ -22,11 +22,13 @@
           <ion-card-title>Bem-vindo ao Renergy!</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          <p>Estamos felizes em tê-lo a bordo. Explore as funcionalidades do Renergy e descubra como podemos ajudar você.</p>
+          <p>Estamos felizes em tê-lo a bordo. Explore as funcionalidades do Renergy e descubra como podemos ajudar
+            você.</p>
         </ion-card-content>
       </div>
       <div class="welcome-icon-container">
-        <ion-icon name="flash"></ion-icon>    </div>
+        <ion-icon name="flash"></ion-icon>
+      </div>
     </div>
   </ion-card>
 
@@ -64,25 +66,27 @@
     </div>
   </ion-card>
 
-  <!-- Card AJUSTES -->
-  <ion-card button color="tertiary" class="rounded-card" (click)="go('/configuracoes')">
+  <!-- Card FEEDBACK  -->
+
+  <ion-card button color="tertiary" class="rounded-card" (click)="go('/feedback')">
     <div class="card-content">
       <div class="icon-container">
-        <ion-icon name="settings-outline"></ion-icon>
+        <ion-icon name="star-half"></ion-icon>
       </div>
       <div class="text-container">
         <ion-card-header>
-          <ion-card-title>AJUSTES</ion-card-title>
+          <ion-card-title>FEEDBACK</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          <p>Configurações do sistema</p>
+          <p>Deixe reclamações, sugestões e ideias</p>
         </ion-card-content>
       </div>
     </div>
   </ion-card>
 
   <!-- Card CENTRAL DE AJUDA -->
-  <ion-card button color="medium" class="rounded-card" (click)="go('/sac')">
+
+  <ion-card button color="success" class="rounded-card" (click)="go('/sac')">
     <div class="card-content">
       <div class="icon-container">
         <ion-icon name="help-circle-outline"></ion-icon>
@@ -98,4 +102,21 @@
     </div>
   </ion-card>
 
+  <!-- Card AJUSTES -->
+
+  <ion-card button color="medium" class="rounded-card" (click)="go('/configuracoes')">
+    <div class="card-content">
+      <div class="icon-container">
+        <ion-icon name="settings-outline"></ion-icon>
+      </div>
+      <div class="text-container">
+        <ion-card-header>
+          <ion-card-title>AJUSTES</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Configurações do sistema</p>
+        </ion-card-content>
+      </div>
+    </div>
+  </ion-card>
 </ion-content>

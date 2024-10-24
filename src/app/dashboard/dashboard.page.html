@@ -32,7 +32,7 @@
   </ion-card>
 
   <!-- Card ALERTAS -->
-  <ion-card button color="primary" class="rounded-card"  routerLink="/listaralertas">
+  <ion-card button color="primary" class="rounded-card"  (click)="go('/listaralertas')">
     <div class="card-content">
       <div class="icon-container">
         <ion-icon name="construct"></ion-icon>      </div>
@@ -48,7 +48,7 @@
   </ion-card>
 
   <!-- Card HORÁRIOS -->
-  <ion-card button color="tertiary" class="rounded-card" routerLink="/admusuarios">
+  <ion-card button color="tertiary" class="rounded-card" (click)="go('/admusuarios')">
     <div class="card-content">
       <div class="icon-container">
         <ion-icon name="timer"></ion-icon>      </div>
@@ -57,11 +57,26 @@
           <ion-card-title>GERENCIAR USUÁRIOS</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          <p>Registrar, editar, usuários</p>
+          <p>Registrar e editar usuários</p>
         </ion-card-content>
       </div>
     </div>
   </ion-card>
+    <!-- Card FEEDBACK -->
+    <ion-card button color="primary" class="rounded-card"  (click)="go('/admfeedback')">
+      <div class="card-content">
+        <div class="icon-container">
+          <ion-icon name="star-half"></ion-icon>      </div>
+        <div class="text-container">
+          <ion-card-header>
+            <ion-card-title>VER FEEDBACK'S</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Ver e excluir feedbacks</p>
+          </ion-card-content>
+        </div>
+      </div>
+    </ion-card>
 
   <!-- Card AJUSTES -->
 
