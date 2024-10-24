@@ -1,4 +1,4 @@
-<ion-content [fullscreen]="true"> 
+<ion-content [fullscreen]="true">
   <!-- Back button with icon and text linking to home -->
   <ion-header [translucent]="true">
     <ion-toolbar>
@@ -19,7 +19,61 @@
           <ion-card-title class="login-title">Entre na sua conta</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          <!-- Form submission with (ngSubmit) to call autenticar() -->
+          <!-- Form para o login, utilizando ngSubmit para chamar login() -->
+          <form (ngSubmit)="login()">
+            <div class="input-group">
+              <label class="input-label" for="usuario">Usuário</label>
+              <ion-input [(ngModel)]="usuario" name="usuario" class="input-form" id="usuario" fill="outline" placeholder="Digite seu usuário"></ion-input>
+            </div>
+
+            <div class="input-group">
+              <label class="input-label" for="senha">Senha</label>
+              <ion-input [(ngModel)]="senha" name="senha" type="password" class="input-form" id="senha" fill="outline" placeholder="***********"></ion-input>
+            </div>
+
+            <div class="forgot-password">
+              <a (click)="go('/esqueceu')">Esqueceu a senha?</a>
+            </div>
+
+            <ion-button expand="block" class="login-button" type="submit">Entrar</ion-button>
+          </form>
+
+          <div class="signup-link">
+            <p>Ainda não tem conta? <a (click)="go('/cadastro')"><b>Crie uma!</b></a></p>
+          </div>
+        </ion-card-content>
+      </div>
+    </ion-card>
+  </div>
+
+  <!-- Admin Mode Button at the Bottom -->
+  <ion-button expand="full" (click)="go('/adminlogin')">
+    <ion-icon name="shield-checkmark-outline"></ion-icon>
+    <ion-label>Modo Admin</ion-label>
+  </ion-button>
+</ion-content>
+
+<!-- <ion-content [fullscreen]="true"> 
+  Back button with icon and text linking to home 
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button (click)="go('/home')">
+          <ion-icon name="arrow-back-circle"></ion-icon>
+          <ion-label>ㅤIr para home</ion-label>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="login-container">
+    <ion-card class="rounded-ios-card">
+      <div class="login-content">
+        <ion-card-header class="header-center">
+          <img src="https://i.imgur.com/t4I9hO1.png" class="login-logo" />
+          <ion-card-title class="login-title">Entre na sua conta</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
           <form [formGroup]="formLogin" (ngSubmit)="autenticar()">
             <div class="input-group">
               <label class="input-label" for="cpfj">CPF</label>
@@ -46,11 +100,10 @@
     </ion-card>
   </div>
 
-  <!-- Admin Mode Button at the Bottom -->
 
     <ion-button expand="full" (click)="go('/adminlogin')">
       <ion-icon name="shield-checkmark-outline"></ion-icon>
       <ion-label>Modo Admin</ion-label>
     </ion-button>
 
-</ion-content>
+</ion-content>-->

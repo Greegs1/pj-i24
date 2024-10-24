@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+/*import { Component, OnInit } from '@angular/core';
 import { RequisicaoService } from '../service/requisicao.service';
 import { LoadingController } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
@@ -86,9 +86,42 @@ import { LocalstorageService } from '../service/localstorage.service';
     if (this.ls.get('is_autenticado') == true){
       location.href = '/home';
     }
+  }*/
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.page.html',
+  styleUrls: ['./login.page.scss'],
+})
+export class LoginPage {
+  usuario: string = '';
+  senha: string = '';
+
+  constructor(private router: Router, private alertCtrl: AlertController) { }
+
+  // Função de login
+  login() {
+    if (this.usuario === 'teste' && this.senha === 'teste') {
+      this.router.navigate(['/home']); // Redireciona para a página home
+    } else {
+      this.mostrarAlerta('Erro', 'Usuário ou senha incorretos!');
+    }
   }
- 
-  go(rota:string){
+
+  // Função para exibir alerta em caso de erro
+  async mostrarAlerta(header: string, message: string) {
+    const alert = await this.alertCtrl.create({
+      header,
+      message,
+      buttons: ['OK'],
+    });
+    await alert.present();
+  }
+
+  go(rota: string) {
     window.location.href = rota;
   }
 
