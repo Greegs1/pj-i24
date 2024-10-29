@@ -104,7 +104,7 @@ export class LoginPage {
 
   // Função de login
   login() {
-    if (this.usuario === 'teste' && this.senha === 'teste') {
+    if (this.usuario === 'usuario' && this.senha === 'senha') {
       this.router.navigate(['/home']); // Redireciona para a página home
     } else {
       this.mostrarAlerta('Erro', 'Usuário ou senha incorretos!');
